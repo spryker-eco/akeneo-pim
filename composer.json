@@ -1,6 +1,9 @@
 {
   "name": "spryker-eco/akeneo-pim",
   "description": "Akeneo PIM Integration Module",
+  "require": {
+    "akeneo/api-php-client": "^1.0@beta"
+  },
   "autoload": {
     "psr-0": {
       "SprykerEco": "src/",
