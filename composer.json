@@ -1,0 +1,16 @@
+{
+  "name": "spryker-eco/akeneo-pim",
+  "description": "Akeneo PIM Integration Module",
+  "autoload": {
+    "psr-0": {
+      "SprykerEco": "src/",
+      "Function": "tests/"
+    }
+  },
+  "autoload-dev": {
+    "psr-0": {
+      "Functional": "tests/",
+      "Unit": "tests/"
+    }
+  }
+}
