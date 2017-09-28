@@ -8,6 +8,8 @@
 namespace SprykerEco\Zed\AkeneoPim\Communication\Console;
 
 use Spryker\Zed\Kernel\Communication\Console\Console;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * Class AkeneoPimConsole
@@ -15,5 +17,23 @@ use Spryker\Zed\Kernel\Communication\Console\Console;
  */
 class AkeneoPimConsole extends Console
 {
+    /**
+     * @return void
+     */
+    protected function configure()
+    {
+        $this->setName('akeneo:import')
+            ->setDescription('This command executes Akeneo Pim importers');
+    }
 
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     *
+     * @return void
+     */
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
+        // TODO: Implement call to Facade
+    }
 }
