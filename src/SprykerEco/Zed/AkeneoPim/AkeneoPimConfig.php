@@ -16,6 +16,7 @@ use SprykerEco\Shared\AkeneoPim\AkeneoPimConstants;
  */
 class AkeneoPimConfig extends AbstractBundleConfig
 {
+
     /**
      * @return string
      */
@@ -55,4 +56,5 @@ class AkeneoPimConfig extends AbstractBundleConfig
     {
         return $this->get(AkeneoPimConstants::CLIENT_SECRET);
     }
+
 }

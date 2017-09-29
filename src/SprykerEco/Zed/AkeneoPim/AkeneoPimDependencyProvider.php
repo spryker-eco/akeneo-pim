@@ -15,5 +15,4 @@ use Spryker\Zed\Kernel\AbstractBundleDependencyProvider;
  */
 class AkeneoPimDependencyProvider extends AbstractBundleDependencyProvider
 {
-
 }
