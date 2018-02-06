@@ -8,6 +8,7 @@
 namespace SprykerEco\Service\AkeneoPim\Api\Adapter\Attributes;
 
 use Akeneo\Pim\ApiClient\AkeneoPimClientInterface;
+use SprykerEco\Service\AkeneoPim\Api\Wrapper\WrapperFactoryInterface;
 
 class AttributeOptionApiAdapter implements AttributeOptionApiAdapterInterface
 {
@@ -17,11 +18,18 @@ class AttributeOptionApiAdapter implements AttributeOptionApiAdapterInterface
     protected $akeneoPimClient;
 
     /**
-     * @param \Akeneo\Pim\ApiClient\AkeneoPimClientInterface $akeneoPimClient
+     * @var \SprykerEco\Service\AkeneoPim\Api\Wrapper\WrapperFactoryInterface
      */
-    public function __construct(AkeneoPimClientInterface $akeneoPimClient)
+    private $wrapperFactory;
+
+    /**
+     * @param \Akeneo\Pim\ApiClient\AkeneoPimClientInterface $akeneoPimClient
+     * @param \SprykerEco\Service\AkeneoPim\Api\Wrapper\WrapperFactoryInterface $wrapperFactory
+     */
+    public function __construct(AkeneoPimClientInterface $akeneoPimClient, WrapperFactoryInterface $wrapperFactory)
     {
         $this->akeneoPimClient = $akeneoPimClient;
+        $this->wrapperFactory = $wrapperFactory;
     }
 
     /**
@@ -39,9 +47,12 @@ class AttributeOptionApiAdapter implements AttributeOptionApiAdapterInterface
      */
     public function listPerPage($attributeCode, $limit = 10, $withCount = false, array $queryParameters = [])
     {
-        return $this->akeneoPimClient
+        $page = $this->akeneoPimClient
             ->getAttributeOptionApi()
             ->listPerPage($attributeCode, $limit, $withCount, $queryParameters);
+
+        return $this->wrapperFactory
+            ->createAkeneoPage($page);
     }
 
     /**
@@ -49,8 +60,11 @@ class AttributeOptionApiAdapter implements AttributeOptionApiAdapterInterface
      */
     public function all($attributeCode, $pageSize = 10, array $queryParameters = [])
     {
-        return $this->akeneoPimClient
+        $resourceCursor = $this->akeneoPimClient
             ->getAttributeOptionApi()
             ->all($attributeCode, $pageSize, $queryParameters);
+
+        return $this->wrapperFactory
+            ->createAkeneoResourceCursor($resourceCursor);
     }
 }

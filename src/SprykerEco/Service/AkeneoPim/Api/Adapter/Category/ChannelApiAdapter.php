@@ -9,6 +9,7 @@ namespace SprykerEco\Service\AkeneoPim\Api\Adapter\Category;
 
 use Akeneo\Pim\ApiClient\AkeneoPimClientInterface;
 use SprykerEco\Service\AkeneoPim\Api\Adapter\ApiAdapterInterface;
+use SprykerEco\Service\AkeneoPim\Api\Wrapper\WrapperFactoryInterface;
 
 class ChannelApiAdapter implements ApiAdapterInterface
 {
@@ -18,11 +19,18 @@ class ChannelApiAdapter implements ApiAdapterInterface
     protected $akeneoPimClient;
 
     /**
-     * @param \Akeneo\Pim\ApiClient\AkeneoPimClientInterface $akeneoPimClient
+     * @var \SprykerEco\Service\AkeneoPim\Api\Wrapper\WrapperFactoryInterface
      */
-    public function __construct(AkeneoPimClientInterface $akeneoPimClient)
+    private $wrapperFactory;
+
+    /**
+     * @param \Akeneo\Pim\ApiClient\AkeneoPimClientInterface $akeneoPimClient
+     * @param \SprykerEco\Service\AkeneoPim\Api\Wrapper\WrapperFactoryInterface $wrapperFactory
+     */
+    public function __construct(AkeneoPimClientInterface $akeneoPimClient, WrapperFactoryInterface $wrapperFactory)
     {
         $this->akeneoPimClient = $akeneoPimClient;
+        $this->wrapperFactory = $wrapperFactory;
     }
 
     /**
@@ -40,9 +48,12 @@ class ChannelApiAdapter implements ApiAdapterInterface
      */
     public function listPerPage($limit = 10, $withCount = false, array $queryParameters = [])
     {
-        return $this->akeneoPimClient
+        $page = $this->akeneoPimClient
             ->getChannelApi()
             ->listPerPage($limit, $withCount, $queryParameters);
+
+        return $this->wrapperFactory
+            ->createAkeneoPage($page);
     }
 
     /**
@@ -50,8 +61,11 @@ class ChannelApiAdapter implements ApiAdapterInterface
      */
     public function all($pageSize = 10, array $queryParameters = [])
     {
-        return $this->akeneoPimClient
+        $resourceCursor = $this->akeneoPimClient
             ->getChannelApi()
             ->all($pageSize, $queryParameters);
+
+        return $this->wrapperFactory
+            ->createAkeneoResourceCursor($resourceCursor);
     }
 }
