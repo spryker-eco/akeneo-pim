@@ -36,7 +36,7 @@ class AkeneoPimSdkFactory implements AkeneoPimSdkFactoryInterface
     }
 
     /**
-     * @SuppressWarnings(PHPMD.FactoryMethodReturnInterfaceRule)
+     * @SuppressWarnings(FactoryMethodReturnInterfaceRule)
      *
      * @return \Http\Client\HttpClient
      */
