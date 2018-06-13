@@ -1,4 +1,7 @@
-#include:
+namespace: AkeneoPim
+
+include:
+    - tests/SprykerEcoTest/Service/AkeneoPim
 
 paths:
     tests: tests
