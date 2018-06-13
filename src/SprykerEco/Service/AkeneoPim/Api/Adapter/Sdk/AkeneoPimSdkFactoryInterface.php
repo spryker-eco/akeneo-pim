@@ -12,7 +12,7 @@ use SprykerEco\Service\AkeneoPim\AkeneoPimConfig;
 interface AkeneoPimSdkFactoryInterface
 {
     /**
-     * @param \SprykerEco\Zed\AkeneoPim\AkeneoPimConfig $config
+     * @param \SprykerEco\Service\AkeneoPim\AkeneoPimConfig $config
      *
      * @return \Akeneo\Pim\ApiClient\AkeneoPimClientInterface
      */
