@@ -7,7 +7,7 @@
 
 namespace SprykerEco\Service\AkeneoPim;
 
-use Spryker\Zed\Kernel\AbstractBundleConfig;
+use Spryker\Service\Kernel\AbstractBundleConfig;
 use SprykerEco\Shared\AkeneoPim\AkeneoPimConstants;
 
 class AkeneoPimConfig extends AbstractBundleConfig
