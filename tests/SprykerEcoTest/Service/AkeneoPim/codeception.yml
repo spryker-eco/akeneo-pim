@@ -19,3 +19,4 @@ suites:
         modules:
             enabled:
                 - Asserts
+                - \PyzTest\Shared\Testify\Helper\Environment
