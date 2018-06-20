@@ -77,7 +77,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllAttributeOptions($attributeCode, $pageSize = 10, array $queryParameters = [])
     {
@@ -186,7 +186,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllFamilyVariants($familyCode, $pageSize = 10, array $queryParameters = [])
     {
@@ -539,7 +539,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of resources.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \Akeneo\Pim\ApiClient\Pagination\PageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getAttributeOptionsListPerPage($attributeCode, $limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -654,7 +654,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of family variants.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \Akeneo\Pim\ApiClient\Pagination\PageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getFamilyVariantsListPerPage($familyCode, $limit = 10, $withCount = false, array $queryParameters = [])
     {

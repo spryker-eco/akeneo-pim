@@ -30,7 +30,7 @@ interface FamilyVariantApiAdapterInterface
      *                               This parameter could decrease drastically the performance when set to true.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \Akeneo\Pim\ApiClient\Pagination\PageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function listPerPage($familyCode, $limit = 10, $withCount = false, array $queryParameters = []);
 
@@ -42,7 +42,7 @@ interface FamilyVariantApiAdapterInterface
      *                               Do note that the server has a maximum limit allowed.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function all($familyCode, $pageSize = 10, array $queryParameters = []);
 }

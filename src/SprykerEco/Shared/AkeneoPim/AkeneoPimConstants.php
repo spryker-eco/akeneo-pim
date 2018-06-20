@@ -7,7 +7,7 @@
 
 namespace SprykerEco\Shared\AkeneoPim;
 
-class AkeneoPimConstants
+interface AkeneoPimConstants
 {
     public const AKENEO_PIM_HOST = 'AKENEO_PIM_HOST';
     public const AKENEO_PIM_USERNAME = 'AKENEO_PIM_USERNAME';
