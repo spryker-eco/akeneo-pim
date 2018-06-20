@@ -9,9 +9,9 @@ namespace SprykerEco\Shared\AkeneoPim;
 
 class AkeneoPimConstants
 {
-    public const HOST = 'akeneo.host';
-    public const USERNAME = 'akeneo.username';
-    public const PASSWORD = 'akeneo.password';
-    public const CLIENT_ID = 'akeneo.client.id';
-    public const CLIENT_SECRET = 'akeneo.client.secret';
+    public const AKENEO_PIM_HOST = 'AKENEO_PIM_HOST';
+    public const AKENEO_PIM_USERNAME = 'AKENEO_PIM_USERNAME';
+    public const AKENEO_PIM_PASSWORD = 'AKENEO_PIM_PASSWORD';
+    public const AKENEO_PIM_CLIENT_ID = 'AKENEO_PIM_CLIENT_ID';
+    public const AKENEO_PIM_CLIENT_SECRET = 'AKENEO_PIM_CLIENT_SECRET';
 }

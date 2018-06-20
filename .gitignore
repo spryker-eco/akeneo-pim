@@ -8,3 +8,4 @@
 *.AppleDouble
 *.AppleDB
 *.AppleDesktop
+phpstan.json
