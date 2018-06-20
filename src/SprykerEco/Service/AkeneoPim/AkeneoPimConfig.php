@@ -17,7 +17,7 @@ class AkeneoPimConfig extends AbstractBundleConfig
      */
     public function getHost()
     {
-        return $this->get(AkeneoPimConstants::AKENEO_PIM_HOST);
+        return $this->get(AkeneoPimConstants::HOST);
     }
 
     /**
@@ -25,7 +25,7 @@ class AkeneoPimConfig extends AbstractBundleConfig
      */
     public function getUsername()
     {
-        return $this->get(AkeneoPimConstants::AKENEO_PIM_USERNAME);
+        return $this->get(AkeneoPimConstants::USERNAME);
     }
 
     /**
@@ -33,7 +33,7 @@ class AkeneoPimConfig extends AbstractBundleConfig
      */
     public function getPassword()
     {
-        return $this->get(AkeneoPimConstants::AKENEO_PIM_PASSWORD);
+        return $this->get(AkeneoPimConstants::PASSWORD);
     }
 
     /**
@@ -41,7 +41,7 @@ class AkeneoPimConfig extends AbstractBundleConfig
      */
     public function getClientId()
     {
-        return $this->get(AkeneoPimConstants::AKENEO_PIM_CLIENT_ID);
+        return $this->get(AkeneoPimConstants::CLIENT_ID);
     }
 
     /**
@@ -49,6 +49,6 @@ class AkeneoPimConfig extends AbstractBundleConfig
      */
     public function getClientSecret()
     {
-        return $this->get(AkeneoPimConstants::AKENEO_PIM_CLIENT_SECRET);
+        return $this->get(AkeneoPimConstants::CLIENT_SECRET);
     }
 }
