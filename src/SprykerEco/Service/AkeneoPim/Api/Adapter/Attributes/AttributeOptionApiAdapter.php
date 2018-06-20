@@ -34,6 +34,10 @@ class AttributeOptionApiAdapter implements AttributeOptionApiAdapterInterface
 
     /**
      * @inheritdoc
+     *
+     * @param string $code Code of the resource
+     *
+     * @return array
      */
     public function get($attributeCode, $code)
     {
@@ -44,6 +48,14 @@ class AttributeOptionApiAdapter implements AttributeOptionApiAdapterInterface
 
     /**
      * @inheritdoc
+     *
+     * @param int $limit The maximum number of resources to return.
+     *                               Do note that the server has a maximum limit allowed.
+     * @param bool $withCount Set to true to return the total count of resources.
+     *                               This parameter could decrease drastically the performance when set to true.
+     * @param array $queryParameters Additional query parameters to pass in the request.
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function listPerPage($attributeCode, $limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -57,6 +69,12 @@ class AttributeOptionApiAdapter implements AttributeOptionApiAdapterInterface
 
     /**
      * @inheritdoc
+     *
+     * @param int $pageSize The size of the page returned by the server.
+     *                               Do note that the server has a maximum limit allowed.
+     * @param array $queryParameters Additional query parameters to pass in the request
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function all($attributeCode, $pageSize = 10, array $queryParameters = [])
     {

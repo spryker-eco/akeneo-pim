@@ -15,8 +15,7 @@ use Spryker\Service\Kernel\AbstractService;
 class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterface
 {
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of products.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -34,8 +33,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of categories.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -53,8 +51,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of attributes.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -72,8 +69,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of attributes.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -81,7 +77,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllAttributeOptions($attributeCode, $pageSize = 10, array $queryParameters = [])
     {
@@ -92,8 +88,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of attribute groups.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -111,8 +106,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of channels.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -130,8 +124,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of currencies.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -149,8 +142,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of locales.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -168,8 +160,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of families.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -187,8 +178,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of family variants.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -196,7 +186,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllFamilyVariants($familyCode, $pageSize = 10, array $queryParameters = [])
     {
@@ -207,8 +197,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of measure families.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -226,8 +215,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of association types.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -245,8 +233,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of product media files.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -264,8 +251,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a cursor to iterate over a list of product models.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -283,8 +269,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a attribute by its code
+     * {@inheritdoc}
      *
      * @api
      *
@@ -301,8 +286,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a attribute group by its code
+     * {@inheritdoc}
      *
      * @api
      *
@@ -319,8 +303,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a attribute option group by its code
+     * {@inheritdoc}
      *
      * @api
      *
@@ -338,8 +321,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a category by its code
+     * {@inheritdoc}
      *
      * @api
      *
@@ -356,8 +338,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a channel by its code
+     * {@inheritdoc}
      *
      * @api
      *
@@ -374,8 +355,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a currency by its code
+     * {@inheritdoc}
      *
      * @api
      *
@@ -392,8 +372,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a locale by its code
+     * {@inheritdoc}
      *
      * @api
      *
@@ -410,8 +389,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a family by its code
+     * {@inheritdoc}
      *
      * @api
      *
@@ -428,8 +406,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a family variant by its code
+     * {@inheritdoc}
      *
      * @api
      *
@@ -447,8 +424,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a measure family by its code
+     * {@inheritdoc}
      *
      * @api
      *
@@ -465,8 +441,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a product by its code
+     * {@inheritdoc}
      *
      * @api
      *
@@ -483,8 +458,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a product media file by its code
+     * {@inheritdoc}
      *
      * @api
      *
@@ -501,8 +475,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a product model by its code
+     * {@inheritdoc}
      *
      * @api
      *
@@ -519,8 +492,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a list of attributes by returning the first page.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -539,8 +511,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a list of attribute groups by returning the first page.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -559,8 +530,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a list of attribute options by returning the first page.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -569,7 +539,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of resources.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \Akeneo\Pim\ApiClient\Pagination\PageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getAttributeOptionsListPerPage($attributeCode, $limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -580,8 +550,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a list of categories by returning the first page.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -600,8 +569,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a list of channels by returning the first page.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -620,8 +588,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a list of currencies by returning the first page.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -640,8 +607,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a list of locales by returning the first page.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -660,8 +626,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a list of families by returning the first page.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -680,8 +645,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a list of family variants by returning the first page.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -690,7 +654,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of family variants.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \Akeneo\Pim\ApiClient\Pagination\PageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getFamilyVariantsListPerPage($familyCode, $limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -701,8 +665,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a list of measure families by returning the first page.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -721,8 +684,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a list of products by returning the first page.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -741,8 +703,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a list of product media files by returning the first page.
+     * {@inheritdoc}
      *
      * @api
      *
@@ -761,8 +722,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * Specification:
-     *  - Gets a list of product models by returning the first page.
+     * {@inheritdoc}
      *
      * @api
      *

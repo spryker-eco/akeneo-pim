@@ -35,7 +35,7 @@ class AdapterFactory implements AdapterFactoryInterface
     /**
      * @var \SprykerEco\Service\AkeneoPim\Api\Wrapper\WrapperFactoryInterface
      */
-    private $wrapperFactory;
+    protected $wrapperFactory;
 
     /**
      * @param \SprykerEco\Service\AkeneoPim\AkeneoPimConfig $config
