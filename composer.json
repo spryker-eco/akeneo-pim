@@ -13,6 +13,7 @@
       "Function": "tests/"
     }
   },
+  "minimum-stability": "dev",
   "autoload-dev": {
     "psr-0": {
       "Functional": "tests/",
