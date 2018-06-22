@@ -96,6 +96,9 @@ class AkeneoPimServiceTest extends Unit
         $this->assertEquals(static::CATEGORY_DATA, $service->getAllCategories());
     }
 
+    /**
+     * @return void
+     */
     public function testGetAllAttributes(): void
     {
         $service = $this->prepareService();
@@ -103,6 +106,9 @@ class AkeneoPimServiceTest extends Unit
         $this->assertEquals(static::ATTRIBUTE_DATA, $service->getAllAttributes());
     }
 
+    /**
+     * @return void
+     */
     public function testGetAllFamilies(): void
     {
         $service = $this->prepareService();
@@ -110,6 +116,9 @@ class AkeneoPimServiceTest extends Unit
         $this->assertEquals(static::FAMILY_DATA, $service->getAllFamilies());
     }
 
+    /**
+     * @return void
+     */
     public function testGetFamilyVariants(): void
     {
         $service = $this->prepareService();
@@ -117,6 +126,9 @@ class AkeneoPimServiceTest extends Unit
         $this->assertEquals(static::FAMILY_VARIANTS_DATA, $service->getAllFamilyVariants('code'));
     }
 
+    /**
+     * @return void
+     */
     public function testGetAllAttributeOptions(): void
     {
         $service = $this->prepareService();
@@ -124,6 +136,9 @@ class AkeneoPimServiceTest extends Unit
         $this->assertEquals(static::ATTRIBUTE_OPTIONS_DATA, $service->getAllAttributeOptions('code'));
     }
 
+    /**
+     * @return void
+     */
     public function testGetAllProductModels(): void
     {
         $service = $this->prepareService();
@@ -166,7 +181,6 @@ class AkeneoPimServiceTest extends Unit
 
         return $factory;
     }
-
 
     /**
      * @return \Spryker\Service\Kernel\AbstractBundleConfig
