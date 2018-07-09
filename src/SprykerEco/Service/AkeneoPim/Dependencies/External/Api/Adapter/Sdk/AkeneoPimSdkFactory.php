@@ -8,7 +8,9 @@
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Sdk;
 
 use Akeneo\Pim\ApiClient\AkeneoPimClientBuilder;
+use Akeneo\Pim\ApiClient\AkeneoPimClientInterface;
 use Http\Adapter\Guzzle6\Client;
+use Http\Client\HttpClient;
 use SprykerEco\Service\AkeneoPim\AkeneoPimConfig;
 
 class AkeneoPimSdkFactory implements AkeneoPimSdkFactoryInterface
@@ -18,7 +20,7 @@ class AkeneoPimSdkFactory implements AkeneoPimSdkFactoryInterface
      *
      * @return \Akeneo\Pim\ApiClient\AkeneoPimClientInterface
      */
-    public function createAkeneoPimClient(AkeneoPimConfig $config)
+    public function createAkeneoPimClient(AkeneoPimConfig $config): AkeneoPimClientInterface
     {
         $clientBuilder = new AkeneoPimClientBuilder(
             $config->getHost()
@@ -40,7 +42,7 @@ class AkeneoPimSdkFactory implements AkeneoPimSdkFactoryInterface
      *
      * @return \Http\Client\HttpClient
      */
-    protected function createHttpClient()
+    protected function createHttpClient(): HttpClient
     {
         return new Client();
     }

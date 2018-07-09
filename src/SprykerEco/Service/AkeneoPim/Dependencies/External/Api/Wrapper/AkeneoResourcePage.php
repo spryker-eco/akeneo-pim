@@ -34,7 +34,7 @@ class AkeneoResourcePage implements AkeneoResourcePageInterface
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getFirstPage()
+    public function getFirstPage(): AkeneoResourcePageInterface
     {
         $firstPage = $this->page
             ->getFirstPage();
@@ -46,7 +46,7 @@ class AkeneoResourcePage implements AkeneoResourcePageInterface
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface|null
      */
-    public function getPreviousPage()
+    public function getPreviousPage(): ?AkeneoResourcePageInterface
     {
         $previousPage = $this->page
             ->getPreviousPage();
@@ -61,7 +61,7 @@ class AkeneoResourcePage implements AkeneoResourcePageInterface
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface|null
      */
-    public function getNextPage()
+    public function getNextPage(): ?AkeneoResourcePageInterface
     {
         $nextPage = $this->page
             ->getNextPage();
@@ -76,7 +76,7 @@ class AkeneoResourcePage implements AkeneoResourcePageInterface
     /**
      * @return int|null
      */
-    public function getCount()
+    public function getCount(): ?int
     {
         return $this->page
             ->getCount();
@@ -85,7 +85,7 @@ class AkeneoResourcePage implements AkeneoResourcePageInterface
     /**
      * @return array
      */
-    public function getItems()
+    public function getItems(): array
     {
         return $this->page
             ->getItems();
@@ -94,7 +94,7 @@ class AkeneoResourcePage implements AkeneoResourcePageInterface
     /**
      * @return bool
      */
-    public function hasNextPage()
+    public function hasNextPage(): bool
     {
         return $this->page
             ->hasNextPage();
@@ -103,7 +103,7 @@ class AkeneoResourcePage implements AkeneoResourcePageInterface
     /**
      * @return bool
      */
-    public function hasPreviousPage()
+    public function hasPreviousPage(): bool
     {
         return $this->page
             ->hasPreviousPage();
@@ -112,7 +112,7 @@ class AkeneoResourcePage implements AkeneoResourcePageInterface
     /**
      * @return string|null
      */
-    public function getNextLink()
+    public function getNextLink(): ?string
     {
         return $this->page
             ->getNextLink();
@@ -121,7 +121,7 @@ class AkeneoResourcePage implements AkeneoResourcePageInterface
     /**
      * @return string|null
      */
-    public function getPreviousLink()
+    public function getPreviousLink(): ?string
     {
         return $this->page
             ->getNextLink();

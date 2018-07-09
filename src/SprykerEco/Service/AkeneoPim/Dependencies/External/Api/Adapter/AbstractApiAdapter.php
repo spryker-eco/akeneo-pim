@@ -8,6 +8,8 @@
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter;
 
 use Akeneo\Pim\ApiClient\AkeneoPimClient;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface;
 
 abstract class AbstractApiAdapter implements ApiAdapterInterface
 {
@@ -27,15 +29,15 @@ abstract class AbstractApiAdapter implements ApiAdapterInterface
     /**
      * {@inheritdoc}
      */
-    abstract public function get($code);
+    abstract public function get($code): array;
 
     /**
      * {@inheritdoc}
      */
-    abstract public function listPerPage($limit = 10, $withCount = false, array $queryParameters = []);
+    abstract public function listPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * {@inheritdoc}
      */
-    abstract public function all($pageSize = 10, array $queryParameters = []);
+    abstract public function all($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 }

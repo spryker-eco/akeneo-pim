@@ -26,8 +26,10 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
 
     /**
      * {@inheritdoc}
+     *
+     * @return int
      */
-    public function getPageSize()
+    public function getPageSize(): int
     {
         return $this->resourceCursor
             ->getPageSize();
@@ -35,6 +37,8 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
 
     /**
      * {@inheritdoc}
+     *
+     * @return mixed
      */
     public function current()
     {
@@ -44,8 +48,10 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
 
     /**
      * {@inheritdoc}
+     *
+     * @return void
      */
-    public function next()
+    public function next(): void
     {
         $this->resourceCursor
             ->next();
@@ -53,6 +59,8 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
 
     /**
      * {@inheritdoc}
+     *
+     * @return mixed
      */
     public function key()
     {
@@ -62,8 +70,10 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
 
     /**
      * {@inheritdoc}
+     *
+     * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->resourceCursor
             ->valid();
@@ -71,8 +81,10 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
 
     /**
      * {@inheritdoc}
+     *
+     * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->resourceCursor
             ->rewind();

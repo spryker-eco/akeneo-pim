@@ -7,75 +7,78 @@
 
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter;
 
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeOptionApiAdapterInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Family\FamilyVariantApiAdapterInterface;
+
 interface AdapterFactoryInterface
 {
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
-    public function createProductApiAdapter();
+    public function createProductApiAdapter(): ApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
-    public function createCategoryApiAdapter();
+    public function createCategoryApiAdapter(): ApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
-    public function createAttributeApiAdapter();
+    public function createAttributeApiAdapter(): ApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
-    public function createAttributeGroupApiAdapter();
+    public function createAttributeGroupApiAdapter(): ApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeOptionApiAdapterInterface
      */
-    public function createAttributeOptionApiAdapter();
+    public function createAttributeOptionApiAdapter(): AttributeOptionApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
-    public function createAssociationTypeApiAdapter();
+    public function createAssociationTypeApiAdapter(): ApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
-    public function createChannelApiAdapter();
+    public function createChannelApiAdapter(): ApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
-    public function createCurrencyApiAdapter();
+    public function createCurrencyApiAdapter(): ApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
-    public function createFamilyApiAdapter();
+    public function createFamilyApiAdapter(): ApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Family\FamilyVariantApiAdapterInterface
      */
-    public function createFamilyVariantApiAdapter();
+    public function createFamilyVariantApiAdapter(): FamilyVariantApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
-    public function createLocaleApiAdapter();
+    public function createLocaleApiAdapter(): ApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
-    public function createMeasureFamilyApiAdapter();
+    public function createMeasureFamilyApiAdapter(): ApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
-    public function createProductMediaFileApiAdapter();
+    public function createProductMediaFileApiAdapter(): ApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
-    public function createProductModelApiAdapter();
+    public function createProductModelApiAdapter(): ApiAdapterInterface;
 }

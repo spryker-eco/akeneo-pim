@@ -14,5 +14,5 @@ interface AkeneoResourceCursorInterface extends Iterator
     /**
      * @return int
      */
-    public function getPageSize();
+    public function getPageSize(): int;
 }

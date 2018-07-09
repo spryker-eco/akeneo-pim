@@ -17,12 +17,12 @@ interface WrapperFactoryInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function createAkeneoPage(PageInterface $page);
+    public function createAkeneoPage(PageInterface $page): AkeneoResourcePageInterface;
 
     /**
      * @param \Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface $resourceCursor
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function createAkeneoResourceCursor(ResourceCursorInterface $resourceCursor);
+    public function createAkeneoResourceCursor(ResourceCursorInterface $resourceCursor): AkeneoResourceCursorInterface;
 }

@@ -7,6 +7,9 @@
 
 namespace SprykerEco\Service\AkeneoPim;
 
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface;
+
 interface AkeneoPimServiceInterface
 {
     /**
@@ -20,7 +23,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllProducts($pageSize = 10, array $queryParameters = []);
+    public function getAllProducts($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -33,7 +36,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllCategories($pageSize = 10, array $queryParameters = []);
+    public function getAllCategories($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -46,7 +49,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllAttributes($pageSize = 10, array $queryParameters = []);
+    public function getAllAttributes($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -60,7 +63,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllAttributeOptions($attributeCode, $pageSize = 10, array $queryParameters = []);
+    public function getAllAttributeOptions($attributeCode, $pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -73,7 +76,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllAttributeGroups($pageSize = 10, array $queryParameters = []);
+    public function getAllAttributeGroups($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -86,7 +89,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllChannels($pageSize = 10, array $queryParameters = []);
+    public function getAllChannels($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -99,7 +102,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllCurrencies($pageSize = 10, array $queryParameters = []);
+    public function getAllCurrencies($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -112,7 +115,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllLocales($pageSize = 10, array $queryParameters = []);
+    public function getAllLocales($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -125,7 +128,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllFamilies($pageSize = 10, array $queryParameters = []);
+    public function getAllFamilies($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -139,7 +142,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllFamilyVariants($familyCode, $pageSize = 10, array $queryParameters = []);
+    public function getAllFamilyVariants($familyCode, $pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -152,7 +155,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllMeasureFamilies($pageSize = 10, array $queryParameters = []);
+    public function getAllMeasureFamilies($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -165,7 +168,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllAssociationTypes($pageSize = 10, array $queryParameters = []);
+    public function getAllAssociationTypes($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -178,7 +181,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllProductMediaFiles($pageSize = 10, array $queryParameters = []);
+    public function getAllProductMediaFiles($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -191,7 +194,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function getAllProductModels($pageSize = 10, array $queryParameters = []);
+    public function getAllProductModels($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 
     /**
      * Specification:
@@ -203,7 +206,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getAttribute($code);
+    public function getAttribute($code): array;
 
     /**
      * Specification:
@@ -215,7 +218,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getAttributeGroup($code);
+    public function getAttributeGroup($code): array;
 
     /**
      * Specification:
@@ -228,7 +231,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getAttributeOption($attributeCode, $code);
+    public function getAttributeOption($attributeCode, $code): array;
 
     /**
      * Specification:
@@ -240,7 +243,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getCategory($code);
+    public function getCategory($code): array;
 
     /**
      * Specification:
@@ -252,7 +255,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getChannel($code);
+    public function getChannel($code): array;
 
     /**
      * Specification:
@@ -264,7 +267,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getCurrency($code);
+    public function getCurrency($code): array;
 
     /**
      * Specification:
@@ -276,7 +279,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getLocale($code);
+    public function getLocale($code): array;
 
     /**
      * Specification:
@@ -288,7 +291,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getFamily($code);
+    public function getFamily($code): array;
 
     /**
      * Specification:
@@ -301,7 +304,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getFamilyVariant($familyCode, $code);
+    public function getFamilyVariant($familyCode, $code): array;
 
     /**
      * Specification:
@@ -313,7 +316,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getMeasureFamily($code);
+    public function getMeasureFamily($code): array;
 
     /**
      * Specification:
@@ -325,7 +328,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getProduct($code);
+    public function getProduct($code): array;
 
     /**
      * Specification:
@@ -337,7 +340,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getProductMediaFile($code);
+    public function getProductMediaFile($code): array;
 
     /**
      * Specification:
@@ -349,7 +352,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getProductModel($code);
+    public function getProductModel($code): array;
 
     /**
      * Specification:
@@ -363,7 +366,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getAttributesListPerPage($limit = 10, $withCount = false, array $queryParameters = []);
+    public function getAttributesListPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Specification:
@@ -377,7 +380,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getAttributeGroupsListPerPage($limit = 10, $withCount = false, array $queryParameters = []);
+    public function getAttributeGroupsListPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Specification:
@@ -392,7 +395,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getAttributeOptionsListPerPage($attributeCode, $limit = 10, $withCount = false, array $queryParameters = []);
+    public function getAttributeOptionsListPerPage($attributeCode, $limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Specification:
@@ -406,7 +409,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getCategoriesListPerPage($limit = 10, $withCount = false, array $queryParameters = []);
+    public function getCategoriesListPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Specification:
@@ -420,7 +423,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getChannelsListPerPage($limit = 10, $withCount = false, array $queryParameters = []);
+    public function getChannelsListPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Specification:
@@ -434,7 +437,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getCurrenciesListPerPage($limit = 10, $withCount = false, array $queryParameters = []);
+    public function getCurrenciesListPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Specification:
@@ -448,7 +451,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getLocalesListPerPage($limit = 10, $withCount = false, array $queryParameters = []);
+    public function getLocalesListPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Specification:
@@ -462,7 +465,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getFamiliesListPerPage($limit = 10, $withCount = false, array $queryParameters = []);
+    public function getFamiliesListPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Specification:
@@ -477,7 +480,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getFamilyVariantsListPerPage($familyCode, $limit = 10, $withCount = false, array $queryParameters = []);
+    public function getFamilyVariantsListPerPage($familyCode, $limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Specification:
@@ -491,7 +494,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getMeasureFamilyListPerPage($limit = 10, $withCount = false, array $queryParameters = []);
+    public function getMeasureFamilyListPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Specification:
@@ -505,7 +508,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getProductsListPerPage($limit = 10, $withCount = false, array $queryParameters = []);
+    public function getProductsListPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Specification:
@@ -519,7 +522,7 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getProductMediaFilesListPerPage($limit = 10, $withCount = false, array $queryParameters = []);
+    public function getProductMediaFilesListPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Specification:
@@ -533,5 +536,5 @@ interface AkeneoPimServiceInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getProductModelsListPerPage($limit = 10, $withCount = false, array $queryParameters = []);
+    public function getProductModelsListPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 }

@@ -7,6 +7,9 @@
 
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes;
 
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface;
+
 interface AttributeOptionApiAdapterInterface
 {
     /**
@@ -17,7 +20,7 @@ interface AttributeOptionApiAdapterInterface
      *
      * @return array
      */
-    public function get($attributeCode, $code);
+    public function get($attributeCode, $code): array;
 
     /**
      * Gets a list of resources by returning the first page.
@@ -32,7 +35,7 @@ interface AttributeOptionApiAdapterInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function listPerPage($attributeCode, $limit = 10, $withCount = false, array $queryParameters = []);
+    public function listPerPage($attributeCode, $limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Gets a cursor to iterate over a list of resources.
@@ -44,5 +47,5 @@ interface AttributeOptionApiAdapterInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function all($attributeCode, $pageSize = 10, array $queryParameters = []);
+    public function all($attributeCode, $pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 }

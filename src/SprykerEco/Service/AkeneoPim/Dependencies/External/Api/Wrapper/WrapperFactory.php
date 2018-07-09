@@ -17,7 +17,7 @@ class WrapperFactory implements WrapperFactoryInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function createAkeneoPage(PageInterface $page)
+    public function createAkeneoPage(PageInterface $page): AkeneoResourcePageInterface
     {
         return new AkeneoResourcePage($page, $this);
     }
@@ -27,7 +27,7 @@ class WrapperFactory implements WrapperFactoryInterface
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function createAkeneoResourceCursor(ResourceCursorInterface $resourceCursor)
+    public function createAkeneoResourceCursor(ResourceCursorInterface $resourceCursor): AkeneoResourceCursorInterface
     {
         return new AkeneoResourceCursor($resourceCursor);
     }

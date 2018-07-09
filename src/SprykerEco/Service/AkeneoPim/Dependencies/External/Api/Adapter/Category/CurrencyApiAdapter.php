@@ -9,6 +9,8 @@ namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Categor
 
 use Akeneo\Pim\ApiClient\AkeneoPimClientInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface;
 
 class CurrencyApiAdapter implements ApiAdapterInterface
@@ -34,17 +36,13 @@ class CurrencyApiAdapter implements ApiAdapterInterface
     }
 
     /**
-<<<<<<< Updated upstream:src/SprykerEco/Service/AkeneoPim/Api/Adapter/Category/CurrencyApiAdapter.php
-     * @inheritdoc
+     * {@inheritdoc}
      *
      * @param string $code Code of the resource
      *
      * @return array
-=======
-     * {@inheritdoc}
->>>>>>> Stashed changes:src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Adapter/Category/CurrencyApiAdapter.php
      */
-    public function get($code)
+    public function get($code): array
     {
         return $this->akeneoPimClient
             ->getCurrencyApi()
@@ -52,8 +50,7 @@ class CurrencyApiAdapter implements ApiAdapterInterface
     }
 
     /**
-<<<<<<< Updated upstream:src/SprykerEco/Service/AkeneoPim/Api/Adapter/Category/CurrencyApiAdapter.php
-     * @inheritdoc
+     * {@inheritdoc}
      *
      * @param int $limit The maximum number of resources to return.
      *                               Do note that the server has a maximum limit allowed.
@@ -61,12 +58,9 @@ class CurrencyApiAdapter implements ApiAdapterInterface
      *                               This parameter could decrease drastically the performance when set to true.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
-=======
-     * {@inheritdoc}
->>>>>>> Stashed changes:src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Adapter/Category/CurrencyApiAdapter.php
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function listPerPage($limit = 10, $withCount = false, array $queryParameters = [])
+    public function listPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface
     {
         $page = $this->akeneoPimClient
             ->getCurrencyApi()
@@ -77,19 +71,15 @@ class CurrencyApiAdapter implements ApiAdapterInterface
     }
 
     /**
-<<<<<<< Updated upstream:src/SprykerEco/Service/AkeneoPim/Api/Adapter/Category/CurrencyApiAdapter.php
-     * @inheritdoc
+     * {@inheritdoc}
      *
      * @param int $pageSize The size of the page returned by the server.
      *                               Do note that the server has a maximum limit allowed.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
-=======
-     * {@inheritdoc}
->>>>>>> Stashed changes:src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Adapter/Category/CurrencyApiAdapter.php
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function all($pageSize = 10, array $queryParameters = [])
+    public function all($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface
     {
         $resourceCursor = $this->akeneoPimClient
             ->getCurrencyApi()

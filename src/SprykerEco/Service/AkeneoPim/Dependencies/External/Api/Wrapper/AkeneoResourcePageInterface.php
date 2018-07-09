@@ -12,45 +12,45 @@ interface AkeneoResourcePageInterface
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getFirstPage();
+    public function getFirstPage(): AkeneoResourcePageInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface|null
      */
-    public function getPreviousPage();
+    public function getPreviousPage(): ?AkeneoResourcePageInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface|null
      */
-    public function getNextPage();
+    public function getNextPage(): ?AkeneoResourcePageInterface;
 
     /**
      * @return int|null
      */
-    public function getCount();
+    public function getCount(): ?int;
 
     /**
      * @return array
      */
-    public function getItems();
+    public function getItems(): array;
 
     /**
      * @return bool
      */
-    public function hasNextPage();
+    public function hasNextPage(): bool;
 
     /**
      * @return bool
      */
-    public function hasPreviousPage();
+    public function hasPreviousPage(): bool;
 
     /**
      * @return string|null
      */
-    public function getNextLink();
+    public function getNextLink(): ?string;
 
     /**
      * @return string|null
      */
-    public function getPreviousLink();
+    public function getPreviousLink(): ?string;
 }
