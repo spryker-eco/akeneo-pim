@@ -8,8 +8,8 @@
 namespace SprykerEco\Service\AkeneoPim;
 
 use Spryker\Service\Kernel\AbstractServiceFactory;
-use SprykerEco\Service\AkeneoPim\Api\Adapter\AdapterFactory;
-use SprykerEco\Service\AkeneoPim\Api\Wrapper\WrapperFactory;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\AdapterFactory;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactory;
 
 /**
  * @method \SprykerEco\Service\AkeneoPim\AkeneoPimConfig getConfig()
@@ -17,7 +17,7 @@ use SprykerEco\Service\AkeneoPim\Api\Wrapper\WrapperFactory;
 class AkeneoPimServiceFactory extends AbstractServiceFactory
 {
     /**
-     * @return \SprykerEco\Service\AkeneoPim\Api\Adapter\AdapterFactoryInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\AdapterFactoryInterface
      */
     public function createAkeneoPimAdapterFactory()
     {
@@ -25,7 +25,7 @@ class AkeneoPimServiceFactory extends AbstractServiceFactory
     }
 
     /**
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\WrapperFactoryInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface
      */
     public function createWrapperFactory()
     {
