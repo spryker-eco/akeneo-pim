@@ -25,6 +25,7 @@ use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Family\Family
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Family\FamilyVariantApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product\ProductApiAdapter;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product\ProductModelApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface;
 
 /**
  * @group SprykerEcoTest
@@ -34,48 +35,6 @@ use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product\Produ
  */
 class AkeneoPimServiceTest extends Unit
 {
-    protected const CATEGORY_DATA = [
-        'category1',
-        'category2',
-        'category3',
-    ];
-
-    protected const PRODUCT_DATA = [
-        'product1',
-        'product2',
-        'product3',
-    ];
-
-    protected const ATTRIBUTE_DATA = [
-        'attribute1',
-        'attribute2',
-        'attribute3',
-    ];
-
-    protected const FAMILY_DATA = [
-        'family1',
-        'family2',
-        'family3',
-    ];
-
-    protected const FAMILY_VARIANTS_DATA = [
-        'familyVariants1',
-        'familyVariants2',
-        'familyVariants3',
-    ];
-
-    protected const ATTRIBUTE_OPTIONS_DATA = [
-        'option1',
-        'option2',
-        'option3',
-    ];
-
-    protected const PRODUCT_MODELS_DATA = [
-        'model1',
-        'model2',
-        'model3',
-    ];
-
     /**
      * @return void
      */
@@ -83,7 +42,7 @@ class AkeneoPimServiceTest extends Unit
     {
         $service = $this->prepareService();
 
-        $this->assertEquals(static::PRODUCT_DATA, $service->getAllProducts());
+        $this->assertTrue($service->getAllProducts() instanceof AkeneoResourceCursorInterface);
     }
 
     /**
@@ -93,7 +52,7 @@ class AkeneoPimServiceTest extends Unit
     {
         $service = $this->prepareService();
 
-        $this->assertEquals(static::CATEGORY_DATA, $service->getAllCategories());
+        $this->assertTrue($service->getAllCategories() instanceof AkeneoResourceCursorInterface);
     }
 
     /**
@@ -103,7 +62,7 @@ class AkeneoPimServiceTest extends Unit
     {
         $service = $this->prepareService();
 
-        $this->assertEquals(static::ATTRIBUTE_DATA, $service->getAllAttributes());
+        $this->assertTrue($service->getAllAttributes() instanceof AkeneoResourceCursorInterface);
     }
 
     /**
@@ -113,7 +72,7 @@ class AkeneoPimServiceTest extends Unit
     {
         $service = $this->prepareService();
 
-        $this->assertEquals(static::FAMILY_DATA, $service->getAllFamilies());
+        $this->assertTrue($service->getAllFamilies() instanceof AkeneoResourceCursorInterface);
     }
 
     /**
@@ -123,7 +82,7 @@ class AkeneoPimServiceTest extends Unit
     {
         $service = $this->prepareService();
 
-        $this->assertEquals(static::FAMILY_VARIANTS_DATA, $service->getAllFamilyVariants('code'));
+        $this->assertTrue($service->getAllFamilyVariants('code') instanceof AkeneoResourceCursorInterface);
     }
 
     /**
@@ -133,7 +92,7 @@ class AkeneoPimServiceTest extends Unit
     {
         $service = $this->prepareService();
 
-        $this->assertEquals(static::ATTRIBUTE_OPTIONS_DATA, $service->getAllAttributeOptions('code'));
+        $this->assertTrue($service->getAllAttributeOptions('code') instanceof AkeneoResourceCursorInterface);
     }
 
     /**
@@ -143,7 +102,7 @@ class AkeneoPimServiceTest extends Unit
     {
         $service = $this->prepareService();
 
-        $this->assertEquals(static::PRODUCT_MODELS_DATA, $service->getAllProductModels());
+        $this->assertTrue($service->getAllProductModels() instanceof AkeneoResourceCursorInterface);
     }
 
     /**
@@ -229,7 +188,7 @@ class AkeneoPimServiceTest extends Unit
             ->setMethods(['all'])
             ->getMock();
 
-        $adapter->method('all')->willReturn(static::CATEGORY_DATA);
+        $adapter->method('all')->willReturn($this->createAkeneoResourceMock());
 
         return $adapter;
     }
@@ -244,7 +203,7 @@ class AkeneoPimServiceTest extends Unit
             ->setMethods(['all'])
             ->getMock();
 
-        $adapter->method('all')->willReturn(static::PRODUCT_DATA);
+        $adapter->method('all')->willReturn($this->createAkeneoResourceMock());
 
         return $adapter;
     }
@@ -259,7 +218,7 @@ class AkeneoPimServiceTest extends Unit
             ->setMethods(['all'])
             ->getMock();
 
-        $adapter->method('all')->willReturn(static::ATTRIBUTE_DATA);
+        $adapter->method('all')->willReturn($this->createAkeneoResourceMock());
 
         return $adapter;
     }
@@ -274,7 +233,7 @@ class AkeneoPimServiceTest extends Unit
             ->setMethods(['all'])
             ->getMock();
 
-        $adapter->method('all')->willReturn(static::FAMILY_DATA);
+        $adapter->method('all')->willReturn($this->createAkeneoResourceMock());
 
         return $adapter;
     }
@@ -289,7 +248,7 @@ class AkeneoPimServiceTest extends Unit
             ->setMethods(['all'])
             ->getMock();
 
-        $adapter->method('all')->willReturn(static::FAMILY_VARIANTS_DATA);
+        $adapter->method('all')->willReturn($this->createAkeneoResourceMock());
 
         return $adapter;
     }
@@ -304,7 +263,7 @@ class AkeneoPimServiceTest extends Unit
             ->setMethods(['all'])
             ->getMock();
 
-        $adapter->method('all')->willReturn(static::ATTRIBUTE_OPTIONS_DATA);
+        $adapter->method('all')->willReturn($this->createAkeneoResourceMock());
 
         return $adapter;
     }
@@ -319,8 +278,20 @@ class AkeneoPimServiceTest extends Unit
             ->setMethods(['all'])
             ->getMock();
 
-        $adapter->method('all')->willReturn(static::PRODUCT_MODELS_DATA);
+        $adapter->method('all')->willReturn($this->createAkeneoResourceMock());
 
         return $adapter;
+    }
+
+    /**
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
+     */
+    protected function createAkeneoResourceMock(): AkeneoResourceCursorInterface
+    {
+        $mock = $this->getMockBuilder(AkeneoResourceCursorInterface::class)
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        return $mock;
     }
 }
