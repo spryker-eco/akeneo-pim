@@ -9,6 +9,8 @@ namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Family;
 
 use Akeneo\Pim\ApiClient\AkeneoPimClientInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface;
 
 class FamilyVariantApiAdapter implements FamilyVariantApiAdapterInterface
 {
@@ -33,18 +35,14 @@ class FamilyVariantApiAdapter implements FamilyVariantApiAdapterInterface
     }
 
     /**
-<<<<<<< Updated upstream:src/SprykerEco/Service/AkeneoPim/Api/Adapter/Family/FamilyVariantApiAdapter.php
-     * @inheritdoc
+     * {@inheritdoc}
      *
      * @param string $familyCode Code of the parent family
      * @param string $familyVariantCode Code of the family variant
      *
      * @return array
-=======
-     * {@inheritdoc}
->>>>>>> Stashed changes:src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Adapter/Family/FamilyVariantApiAdapter.php
      */
-    public function get($familyCode, $familyVariantCode)
+    public function get($familyCode, $familyVariantCode): array
     {
         return $this->akeneoPimClient
             ->getFamilyVariantApi()
@@ -52,8 +50,7 @@ class FamilyVariantApiAdapter implements FamilyVariantApiAdapterInterface
     }
 
     /**
-<<<<<<< Updated upstream:src/SprykerEco/Service/AkeneoPim/Api/Adapter/Family/FamilyVariantApiAdapter.php
-     * @inheritdoc
+     * {@inheritdoc}
      *
      * @param int $limit The maximum number of resources to return.
      *                               Do note that the server has a maximum limit allowed.
@@ -61,12 +58,9 @@ class FamilyVariantApiAdapter implements FamilyVariantApiAdapterInterface
      *                               This parameter could decrease drastically the performance when set to true.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
-=======
-     * {@inheritdoc}
->>>>>>> Stashed changes:src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Adapter/Family/FamilyVariantApiAdapter.php
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function listPerPage($familyCode, $limit = 10, $withCount = false, array $queryParameters = [])
+    public function listPerPage($familyCode, $limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface
     {
         $page = $this->akeneoPimClient
             ->getFamilyVariantApi()
@@ -77,19 +71,15 @@ class FamilyVariantApiAdapter implements FamilyVariantApiAdapterInterface
     }
 
     /**
-<<<<<<< Updated upstream:src/SprykerEco/Service/AkeneoPim/Api/Adapter/Family/FamilyVariantApiAdapter.php
-     * @inheritdoc
+     * {@inheritdoc}
      *
      * @param int $pageSize The size of the page returned by the server.
      *                               Do note that the server has a maximum limit allowed.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
-=======
-     * {@inheritdoc}
->>>>>>> Stashed changes:src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Adapter/Family/FamilyVariantApiAdapter.php
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function all($familyCode, $pageSize = 10, array $queryParameters = [])
+    public function all($familyCode, $pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface
     {
         $resourceCursor = $this->akeneoPimClient
             ->getFamilyVariantApi()
