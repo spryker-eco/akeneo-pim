@@ -13,18 +13,18 @@ use SprykerEco\Service\AkeneoPim\AkeneoPimConfig;
 use SprykerEco\Service\AkeneoPim\AkeneoPimService;
 use SprykerEco\Service\AkeneoPim\AkeneoPimServiceFactory;
 use SprykerEco\Service\AkeneoPim\AkeneoPimServiceInterface;
-use SprykerEco\Service\AkeneoPim\Api\Adapter\AdapterFactory;
-use SprykerEco\Service\AkeneoPim\Api\Adapter\AdapterFactoryInterface;
-use SprykerEco\Service\AkeneoPim\Api\Adapter\ApiAdapterInterface;
-use SprykerEco\Service\AkeneoPim\Api\Adapter\Attributes\AttributeApiAdapter;
-use SprykerEco\Service\AkeneoPim\Api\Adapter\Attributes\AttributeOptionApiAdapter;
-use SprykerEco\Service\AkeneoPim\Api\Adapter\Attributes\AttributeOptionApiAdapterInterface;
-use SprykerEco\Service\AkeneoPim\Api\Adapter\Category\CategoryApiAdapter;
-use SprykerEco\Service\AkeneoPim\Api\Adapter\Family\FamilyApiAdapter;
-use SprykerEco\Service\AkeneoPim\Api\Adapter\Family\FamilyVariantApiAdapter;
-use SprykerEco\Service\AkeneoPim\Api\Adapter\Family\FamilyVariantApiAdapterInterface;
-use SprykerEco\Service\AkeneoPim\Api\Adapter\Product\ProductApiAdapter;
-use SprykerEco\Service\AkeneoPim\Api\Adapter\Product\ProductModelApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\AdapterFactory;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\AdapterFactoryInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeOptionApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeOptionApiAdapterInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Category\CategoryApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Family\FamilyApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Family\FamilyVariantApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Family\FamilyVariantApiAdapterInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product\ProductApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product\ProductModelApiAdapter;
 
 /**
  * @group SprykerEcoTest
@@ -191,7 +191,7 @@ class AkeneoPimServiceTest extends Unit
     }
 
     /**
-     * @return \SprykerEco\Service\AkeneoPim\Api\Adapter\AdapterFactoryInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\AdapterFactoryInterface
      */
     protected function createAdapterFactoryMock(): AdapterFactoryInterface
     {
@@ -220,7 +220,7 @@ class AkeneoPimServiceTest extends Unit
     }
 
     /**
-     * @return \SprykerEco\Service\AkeneoPim\Api\Adapter\ApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
     protected function createCategoryApiAdapterMock(): ApiAdapterInterface
     {
@@ -235,7 +235,7 @@ class AkeneoPimServiceTest extends Unit
     }
 
     /**
-     * @return \SprykerEco\Service\AkeneoPim\Api\Adapter\ApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
     protected function createProductApiAdapterMock(): ApiAdapterInterface
     {
@@ -250,7 +250,7 @@ class AkeneoPimServiceTest extends Unit
     }
 
     /**
-     * @return \SprykerEco\Service\AkeneoPim\Api\Adapter\ApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
     protected function createAttributeApiAdapterMock(): ApiAdapterInterface
     {
@@ -265,7 +265,7 @@ class AkeneoPimServiceTest extends Unit
     }
 
     /**
-     * @return \SprykerEco\Service\AkeneoPim\Api\Adapter\ApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
     protected function createFamilyApiAdapterMock(): ApiAdapterInterface
     {
@@ -280,7 +280,7 @@ class AkeneoPimServiceTest extends Unit
     }
 
     /**
-     * @return \SprykerEco\Service\AkeneoPim\Api\Adapter\Family\FamilyVariantApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Family\FamilyVariantApiAdapterInterface
      */
     protected function createFamilyVariantApiAdapterMock(): FamilyVariantApiAdapterInterface
     {
@@ -295,7 +295,7 @@ class AkeneoPimServiceTest extends Unit
     }
 
     /**
-     * @return \SprykerEco\Service\AkeneoPim\Api\Adapter\Attributes\AttributeOptionApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeOptionApiAdapterInterface
      */
     protected function createAttributeOptionApiAdapterMock(): AttributeOptionApiAdapterInterface
     {
@@ -310,7 +310,7 @@ class AkeneoPimServiceTest extends Unit
     }
 
     /**
-     * @return \SprykerEco\Service\AkeneoPim\Api\Adapter\ApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
     protected function createProductModelApiAdapterMock(): ApiAdapterInterface
     {

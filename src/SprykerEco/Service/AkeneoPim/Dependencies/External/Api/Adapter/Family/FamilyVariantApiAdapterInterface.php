@@ -7,6 +7,9 @@
 
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Family;
 
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface;
+
 interface FamilyVariantApiAdapterInterface
 {
     /**
@@ -30,9 +33,9 @@ interface FamilyVariantApiAdapterInterface
      *                               This parameter could decrease drastically the performance when set to true.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function listPerPage($familyCode, $limit = 10, $withCount = false, array $queryParameters = []);
+    public function listPerPage($familyCode, $limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 
     /**
      * Gets a cursor to iterate over a list of resources.
@@ -42,7 +45,7 @@ interface FamilyVariantApiAdapterInterface
      *                               Do note that the server has a maximum limit allowed.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
-    public function all($familyCode, $pageSize = 10, array $queryParameters = []);
+    public function all($familyCode, $pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
 }

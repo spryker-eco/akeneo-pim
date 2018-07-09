@@ -51,11 +51,10 @@ class AttributeOptionApiAdapter implements AttributeOptionApiAdapterInterface
     /**
      * {@inheritdoc}
      *
-     * @param int $limit The maximum number of resources to return.
-     *                               Do note that the server has a maximum limit allowed.
-     * @param bool $withCount Set to true to return the total count of resources.
-     *                               This parameter could decrease drastically the performance when set to true.
-     * @param array $queryParameters Additional query parameters to pass in the request.
+     * @param string $attributeCode
+     * @param int $limit
+     * @param bool $withCount
+     * @param array $queryParameters
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
@@ -72,9 +71,9 @@ class AttributeOptionApiAdapter implements AttributeOptionApiAdapterInterface
     /**
      * {@inheritdoc}
      *
-     * @param int $pageSize The size of the page returned by the server.
-     *                               Do note that the server has a maximum limit allowed.
-     * @param array $queryParameters Additional query parameters to pass in the request
+     * @param string $attributeCode
+     * @param int $pageSize
+     * @param array $queryParameters
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */

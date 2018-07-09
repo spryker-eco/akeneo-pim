@@ -8,6 +8,7 @@
 namespace SprykerEco\Service\AkeneoPim;
 
 use Spryker\Service\Kernel\AbstractService;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface;
 
 /**
  * @method \SprykerEco\Service\AkeneoPim\AkeneoPimServiceFactory getFactory()
@@ -22,7 +23,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllProducts($pageSize = 10, array $queryParameters = [])
     {
@@ -40,7 +41,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllCategories($pageSize = 10, array $queryParameters = [])
     {
@@ -58,7 +59,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllAttributes($pageSize = 10, array $queryParameters = [])
     {
@@ -77,7 +78,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllAttributeOptions($attributeCode, $pageSize = 10, array $queryParameters = [])
     {
@@ -95,7 +96,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllAttributeGroups($pageSize = 10, array $queryParameters = [])
     {
@@ -113,7 +114,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllChannels($pageSize = 10, array $queryParameters = [])
     {
@@ -131,7 +132,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllCurrencies($pageSize = 10, array $queryParameters = [])
     {
@@ -149,7 +150,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllLocales($pageSize = 10, array $queryParameters = [])
     {
@@ -167,7 +168,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllFamilies($pageSize = 10, array $queryParameters = [])
     {
@@ -186,7 +187,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllFamilyVariants($familyCode, $pageSize = 10, array $queryParameters = [])
     {
@@ -204,7 +205,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllMeasureFamilies($pageSize = 10, array $queryParameters = [])
     {
@@ -222,7 +223,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllAssociationTypes($pageSize = 10, array $queryParameters = [])
     {
@@ -240,7 +241,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllProductMediaFiles($pageSize = 10, array $queryParameters = [])
     {
@@ -258,7 +259,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param int $pageSize The size of the page returned by the server.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getAllProductModels($pageSize = 10, array $queryParameters = [])
     {
@@ -500,7 +501,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of attributes.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getAttributesListPerPage($limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -519,7 +520,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of attribute groups.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getAttributeGroupsListPerPage($limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -539,7 +540,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of resources.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getAttributeOptionsListPerPage($attributeCode, $limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -558,7 +559,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of categories.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getCategoriesListPerPage($limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -577,7 +578,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of channels.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getChannelsListPerPage($limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -596,7 +597,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of currencies.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getCurrenciesListPerPage($limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -615,7 +616,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of locales.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getLocalesListPerPage($limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -634,7 +635,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of families.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getFamiliesListPerPage($limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -654,7 +655,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of family variants.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function getFamilyVariantsListPerPage($familyCode, $limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -673,7 +674,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of measure families.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getMeasureFamilyListPerPage($limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -692,7 +693,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of products.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getProductsListPerPage($limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -711,7 +712,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of product media files.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getProductMediaFilesListPerPage($limit = 10, $withCount = false, array $queryParameters = [])
     {
@@ -730,7 +731,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param bool $withCount Set to true to return the total count of product models.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getProductModelsListPerPage($limit = 10, $withCount = false, array $queryParameters = [])
     {

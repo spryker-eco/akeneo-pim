@@ -30,7 +30,7 @@ interface AttributeOptionApiAdapterInterface
      *                               This parameter could decrease drastically the performance when set to true.
      * @param array $queryParameters Additional query parameters to pass in the request.
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function listPerPage($attributeCode, $limit = 10, $withCount = false, array $queryParameters = []);
 
@@ -42,7 +42,7 @@ interface AttributeOptionApiAdapterInterface
      *                               Do note that the server has a maximum limit allowed.
      * @param array $queryParameters Additional query parameters to pass in the request
      *
-     * @return \SprykerEco\Service\AkeneoPim\Api\Wrapper\AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function all($attributeCode, $pageSize = 10, array $queryParameters = []);
 }
