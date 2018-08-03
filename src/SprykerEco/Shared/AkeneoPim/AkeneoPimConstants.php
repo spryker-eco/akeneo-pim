@@ -2,22 +2,16 @@
 
 /**
  * MIT License
- * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
 namespace SprykerEco\Shared\AkeneoPim;
 
-/**
- * Class AkeneoPimConstants
- * @package SprykerEco\Shared\AkeneoPim
- */
-class AkeneoPimConstants
+interface AkeneoPimConstants
 {
-
-    const HOST = 'akeneo.host';
-    const USERNAME = 'akeneo.username';
-    const PASSWORD = 'akeneo.password';
-    const CLIENT_ID = 'akeneo.client.id';
-    const CLIENT_SECRET = 'akeneo.client.secret';
-
+    public const HOST = 'AKENEOPIM:HOST';
+    public const USERNAME = 'AKENEOPIM:USERNAME';
+    public const PASSWORD = 'AKENEOPIM:PASSWORD';
+    public const CLIENT_ID = 'AKENEOPIM:CLIENT_ID';
+    public const CLIENT_SECRET = 'AKENEOPIM:CLIENT_SECRET';
 }

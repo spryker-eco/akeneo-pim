@@ -1,0 +1,47 @@
+language: php
+
+notifications:
+  email: false
+
+sudo: required
+
+matrix:
+  fast_finish: true
+  include:
+     - php: 7.1
+
+services:
+  - postgresql
+  - redis
+  - rabbitmq
+
+addons:
+  postgresql: 9.4
+
+  apt:
+    packages:
+      - graphviz
+
+  hosts:
+    - zed.de.spryker.test
+    - www.de.spryker.test
+
+env:
+  global:
+    - APPLICATION_ENV=devtest
+    - APPLICATION_STORE=DE
+    - MODULE_DIR=module
+    - SHOP_DIR=current
+    - MODULE_NAME=akeneo-pim
+
+cache:
+  directories:
+    - $SHOP_DIR/current/vendor
+    - $HOME/.composer/cache
+
+before_install:
+  - echo "extension = redis.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+
+script:
+  - git clone -b master https://github.com/spryker-eco/eco-ci.git ecoci
+  - ./ecoci/build/travis.sh
