@@ -1,4 +1,4 @@
-# Akeneo Module
+# AkeneoPimModule
 
 [![Build Status](https://travis-ci.org/spryker-eco/akeneo-pim.svg?branch=master)](https://travis-ci.org/spryker-eco/akeneo-pim)
 [![License](https://img.shields.io/github/license/spryker-eco/akeneo-pim.svg?b=master)](https://github.com/spryker-eco/akeneo-pim)
