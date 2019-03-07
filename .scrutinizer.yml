@@ -1,18 +1,24 @@
 build:
-    dependencies:
-        before:
-            - composer config repositories.spryker composer https://code.spryker.com/repo/private
-    environment:
-        php:
-            version: 7.1
+  environment:
+    php: '7.1'
+
+  tests:
+    override:
+      - true
+
+  nodes:
+    analysis:
+      tests:
+        override:
+          - php-scrutinizer-run
 
 checks:
-    php:
-        code_rating: true
+  php:
+    code_rating: true
 
 filter:
-    excluded_paths:
-        - config/*
-        - tests/*
-        - src/Generated/*
-        - src/Pyz/*
+  excluded_paths:
+    - config/*
+    - tests/*
+    - src/Generated/*
+    - src/Pyz/*
