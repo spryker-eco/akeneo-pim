@@ -1,23 +1,23 @@
 {
   "name": "spryker-eco/akeneo-pim",
   "description": "AkeneoPim module",
+  "license": "MIT",
   "require": {
     "php": ">=7.1",
     "spryker/kernel": "^3.0.0",
-    "akeneo/api-php-client": "^1.0.0",
+    "akeneo/api-php-client": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0",
     "php-http/guzzle6-adapter": "^1.0.0"
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "autoload": {
-    "psr-0": {
-      "SprykerEco": "src/",
-      "Function": "tests/"
+    "psr-4": {
+      "SprykerEco\\": "src/SprykerEco/"
     }
   },
-  "minimum-stability": "dev",
   "autoload-dev": {
-    "psr-0": {
-      "Functional": "tests/",
-      "Unit": "tests/"
+    "psr-4": {
+      "SprykerEcoTest\\": "tests/SprykerEcoTest/"
     }
   }
 }
