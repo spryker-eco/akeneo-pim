@@ -7,6 +7,7 @@
 
 namespace SprykerEco\Service\AkeneoPim;
 
+use Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface;
 
@@ -654,4 +655,28 @@ interface AkeneoPimServiceInterface
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getAssetCategoriesListPerPage(int $limit = 10, bool $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
+
+    /**
+     * Specification:
+     * - Gets a single reference entity.
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return array
+     */
+    public function getReferenceEntity(string $code): array;
+
+    /**
+     * Specification:
+     * - Gets a cursor to iterate over the list of reference entities.
+     *
+     * @api
+     *
+     * @param array $queryParameters
+     *
+     * @return ResourceCursorInterface
+     */
+    public function getAllReferenceEntities(array $queryParameters = []): ResourceCursorInterface;
 }

@@ -7,6 +7,7 @@
 
 namespace SprykerEco\Service\AkeneoPim;
 
+use Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface;
 use Spryker\Service\Kernel\AbstractService;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface;
@@ -906,5 +907,39 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
             ->createAkeneoPimAdapterFactory()
             ->createAssetCategoryApiAdapter()
             ->listPerPage($limit, $withCount, $queryParameters);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return array
+     */
+    public function getReferenceEntity(string $code): array
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createReferenceEntityApiAdapter()
+            ->get($code);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param array $queryParameters
+     *
+     * @return ResourceCursorInterface
+     */
+    public function getAllReferenceEntities(array $queryParameters = []): ResourceCursorInterface
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createReferenceEntityApiAdapter()
+            ->all($queryParameters);
     }
 }
