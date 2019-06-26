@@ -615,4 +615,43 @@ interface AkeneoPimServiceInterface
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getAssetTagsListPerPage(int $limit = 10, bool $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
+
+    /**
+     * Specification:
+     *  - Gets a cursor to iterate over a list of asset categories.
+     *
+     * @api
+     *
+     * @param int $pageSize
+     * @param array $queryParameters
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
+     */
+    public function getAllAssetCategories(int $pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
+
+    /**
+     * Specification:
+     *  - Gets an asset category by its code
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return array
+     */
+    public function getAssetCategory(string $code): array;
+
+    /**
+     * Specification:
+     *  - Gets a list of asset categories by returning the first page.
+     *
+     * @api
+     *
+     * @param int $limit
+     * @param bool $withCount
+     * @param array $queryParameters
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
+     */
+    public function getAssetCategoriesListPerPage(int $limit = 10, bool $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 }

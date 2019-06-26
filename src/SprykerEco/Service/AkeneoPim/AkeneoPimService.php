@@ -851,4 +851,60 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
             ->createAssetTagApiAdapter()
             ->listPerPage($limit, $withCount, $queryParameters);
     }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param int $pageSize
+     * @param array $queryParameters
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
+     * @api
+     *
+     */
+    public function getAllAssetCategories(int $pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetCategoryApiAdapter()
+            ->all($pageSize, $queryParameters);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return array
+     */
+    public function getAssetCategory(string $code): array
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetCategoryApiAdapter()
+            ->get($code);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param int $limit
+     * @param bool $withCount
+     * @param array $queryParameters
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
+     */
+    public function getAssetCategoriesListPerPage(int $limit = 10, bool $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetCategoryApiAdapter()
+            ->listPerPage($limit, $withCount, $queryParameters);
+    }
 }
