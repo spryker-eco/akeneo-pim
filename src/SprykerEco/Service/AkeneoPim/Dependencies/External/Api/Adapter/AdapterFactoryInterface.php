@@ -10,6 +10,7 @@ namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeOptionApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Family\FamilyVariantApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityApiAdapterInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityRecordApiAdapterInterface;
 
 interface AdapterFactoryInterface
 {
@@ -102,4 +103,9 @@ interface AdapterFactoryInterface
      * @return ReferenceEntityApiAdapterInterface
      */
     public function createReferenceEntityApiAdapter(): ReferenceEntityApiAdapterInterface;
+
+    /**
+     * @return ReferenceEntityRecordApiAdapterInterface
+     */
+    public function createReferenceEntityRecordApiAdapter(): ReferenceEntityRecordApiAdapterInterface;
 }
