@@ -8,6 +8,9 @@
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter;
 
 use SprykerEco\Service\AkeneoPim\AkeneoPimConfig;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetCategoryApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetTagApiAdapter;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeApiAdapter;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeGroupApiAdapter;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeOptionApiAdapter;
@@ -210,5 +213,38 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createAkeneoPimSdkFactory(): AkeneoPimSdkFactoryInterface
     {
         return new AkeneoPimSdkFactory();
+    }
+
+    /**
+     * @return ApiAdapterInterface
+     */
+    public function createAssetApiAdapter(): ApiAdapterInterface
+    {
+        return new AssetApiAdapter(
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->wrapperFactory
+        );
+    }
+
+    /**
+     * @return ApiAdapterInterface
+     */
+    public function createAssetCategoryApiAdapter(): ApiAdapterInterface
+    {
+        return new AssetCategoryApiAdapter(
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->wrapperFactory
+        );
+    }
+
+    /**
+     * @return ApiAdapterInterface
+     */
+    public function createAssetTagApiAdapter(): ApiAdapterInterface
+    {
+        return new AssetTagApiAdapter(
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->wrapperFactory
+        );
     }
 }

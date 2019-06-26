@@ -537,4 +537,42 @@ interface AkeneoPimServiceInterface
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getProductModelsListPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
-}
+
+    /**
+     * Specification:
+     *  - Gets a cursor to iterate over a list of assets.
+     *
+     * @api
+     *
+     * @param int $pageSize
+     * @param array $queryParameters
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
+     */
+    public function getAllAssets(int $pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
+
+    /**
+     * Specification:
+     *  - Gets an asset by its code
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return array
+     */
+    public function getAsset(string $code): array;
+
+    /**
+     * Specification:
+     *  - Gets a list of assets by returning the first page.
+     *
+     * @api
+     *
+     * @param int $limit
+     * @param bool $withCount
+     * @param array $queryParameters
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
+     */
+    public function getAssetListPerPage(int $limit = 10, bool $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;}
