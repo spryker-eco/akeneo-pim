@@ -790,11 +790,65 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
-    public function getAssetListPerPage(int $limit = 10, bool $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface
+    public function getAssetsListPerPage(int $limit = 10, bool $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface
     {
         return $this->getFactory()
             ->createAkeneoPimAdapterFactory()
             ->createAssetApiAdapter()
+            ->listPerPage($limit, $withCount, $queryParameters);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param int $pageSize
+     * @param array $queryParameters
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
+     */
+    public function getAllAssetTags(int $pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetTagApiAdapter()
+            ->all($pageSize, $queryParameters);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return array
+     */
+    public function getAssetTag(string $code): array
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetTagApiAdapter()
+            ->get($code);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param int $limit
+     * @param bool $withCount
+     * @param array $queryParameters
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
+     */
+    public function getAssetTagsListPerPage(int $limit = 10, bool $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetTagApiAdapter()
             ->listPerPage($limit, $withCount, $queryParameters);
     }
 }

@@ -86,4 +86,9 @@ interface AdapterFactoryInterface
      * @return ApiAdapterInterface
      */
     public function createAssetApiAdapter(): ApiAdapterInterface;
+
+    /**
+     * @return ApiAdapterInterface
+     */
+    public function createAssetTagApiAdapter(): ApiAdapterInterface;
 }
