@@ -705,4 +705,30 @@ interface AkeneoPimServiceInterface
      * @return ResourceCursorInterface
      */
     public function getReferenceEntityRecords(string $referenceEntityCode, array $queryParameters = []): ResourceCursorInterface;
+
+    /**
+     * Specification:
+     * - Gets a single reference entity attribute.
+     *
+     * @api
+     *
+     * @param string $referenceEntityCode
+     * @param string $attributeCode
+     *
+     * @return array
+     */
+    public function getReferenceEntityAttribute(string $referenceEntityCode, string $attributeCode): array;
+
+    /**
+     * Specification:
+     * - Gets the list of the attributes of a given reference entity.
+     *
+     * @api
+     *
+     * @param string $referenceEntityCode
+     * @param array $queryParameters
+     *
+     * @return ResourceCursorInterface
+     */
+    public function getReferenceEntityAttributes(string $referenceEntityCode, array $queryParameters = []): ResourceCursorInterface;
 }

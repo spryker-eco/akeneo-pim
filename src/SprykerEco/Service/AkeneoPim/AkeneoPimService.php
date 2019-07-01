@@ -978,4 +978,40 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
             ->createReferenceEntityRecordApiAdapter()
             ->all($referenceEntityCode, $queryParameters);
     }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $referenceEntityCode
+     * @param string $attributeCode
+     *
+     * @return array
+     */
+    public function getReferenceEntityAttribute(string $referenceEntityCode, string $attributeCode): array
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createReferenceEntityAttributeApiAdapter()
+            ->get($referenceEntityCode, $attributeCode);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $referenceEntityCode
+     * @param array $queryParameters
+     *
+     * @return ResourceCursorInterface
+     */
+    public function getReferenceEntityAttributes(string $referenceEntityCode, array $queryParameters = []): ResourceCursorInterface
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createReferenceEntityAttributeApiAdapter()
+            ->all($referenceEntityCode, $queryParameters);
+    }
 }
