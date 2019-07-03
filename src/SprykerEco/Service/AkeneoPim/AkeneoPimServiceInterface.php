@@ -795,4 +795,28 @@ interface AkeneoPimServiceInterface
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function getPublishedProductsListPerPage(int $limit = 10, bool $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
+
+    /**
+     * Specification:
+     *  - Gets a product draft by its code
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return array
+     */
+    public function getProductDraft(string $code): array;
+
+    /**
+     * Specification:
+     *  - Gets a product model draft by its code
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return array
+     */
+    public function getProductModelDraft(string $code): array;
 }

@@ -9,6 +9,8 @@ namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter;
 
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeOptionApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Family\FamilyVariantApiAdapterInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product\ProductDraftApiAdapterInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product\ProductModelDraftApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityAttributeApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityAttributeOptionApiAdapterInterface;
@@ -85,6 +87,16 @@ interface AdapterFactoryInterface
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
     public function createProductModelApiAdapter(): ApiAdapterInterface;
+
+    /**
+     * @return ProductModelDraftApiAdapterInterface
+     */
+    public function createProductModelDraftApiAdapter(): ProductModelDraftApiAdapterInterface;
+
+    /**
+     * @return ProductDraftApiAdapterInterface
+     */
+    public function createProductDraftApiAdapter(): ProductDraftApiAdapterInterface;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface

@@ -23,7 +23,7 @@ class ChannelApiAdapter implements ApiAdapterInterface
     /**
      * @var \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface
      */
-    private $wrapperFactory;
+    protected $wrapperFactory;
 
     /**
      * @param \Akeneo\Pim\ApiClient\AkeneoPimClientInterface $akeneoPimClient

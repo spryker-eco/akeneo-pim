@@ -1105,4 +1105,38 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
             ->createPublishedProductApiAdapter()
             ->listPerPage($limit, $withCount, $queryParameters);
     }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return array
+     */
+    public function getProductDraft(string $code): array
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createProductDraftApiAdapter()
+            ->get($code);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return array
+     */
+    public function getProductModelDraft(string $code): array
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createProductModelApiAdapter()
+            ->get($code);
+    }
 }
