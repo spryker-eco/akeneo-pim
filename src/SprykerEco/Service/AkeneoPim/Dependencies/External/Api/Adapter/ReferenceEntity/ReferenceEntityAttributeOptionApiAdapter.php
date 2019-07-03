@@ -18,7 +18,7 @@ class ReferenceEntityAttributeOptionApiAdapter implements ReferenceEntityAttribu
     private $wrapperFactory;
 
     /**
-     * @param \Akeneo\Pim\ApiClient\AkeneoPimClientInterface $akeneoPimClient
+     * @param AkeneoPimEnterpriseClientInterface $akeneoPimClient
      * @param \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface $wrapperFactory
      */
     public function __construct(AkeneoPimEnterpriseClientInterface $akeneoPimClient, WrapperFactoryInterface $wrapperFactory)

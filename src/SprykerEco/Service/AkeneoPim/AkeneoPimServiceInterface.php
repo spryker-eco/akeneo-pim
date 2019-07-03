@@ -756,4 +756,43 @@ interface AkeneoPimServiceInterface
      * @return array
      */
     public function getReferenceEntityAttributeOptions(string $referenceEntityCode, string $attributeCode): array;
+
+    /**
+     * Specification:
+     *  - Gets a published product by its code
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return array
+     */
+    public function getPublishedProduct(string $code): array;
+
+    /**
+     * Specification:
+     *  - Gets a cursor to iterate over a list of published products.
+     *
+     * @api
+     *
+     * @param int $pageSize
+     * @param array $queryParameters
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
+     */
+    public function getAllPublishedProducts(int $pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface;
+
+    /**
+     * Specification:
+     *  - Gets a list of published products by returning the first page.
+     *
+     * @api
+     *
+     * @param int $limit
+     * @param bool $withCount
+     * @param array $queryParameters
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
+     */
+    public function getPublishedProductsListPerPage(int $limit = 10, bool $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface;
 }

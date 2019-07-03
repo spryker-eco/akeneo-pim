@@ -1051,4 +1051,58 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
             ->createReferenceEntityAttributeOptionApiAdapter()
             ->all($referenceEntityCode, $attributeCode);
     }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return array
+     */
+    public function getPublishedProduct(string $code): array
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createPublishedProductApiAdapter()
+            ->get($code);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param int $pageSize
+     * @param array $queryParameters
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
+     */
+    public function getAllPublishedProducts(int $pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createPublishedProductApiAdapter()
+            ->all($pageSize, $queryParameters);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param int $limit
+     * @param bool $withCount
+     * @param array $queryParameters
+     *
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
+     */
+    public function getPublishedProductsListPerPage(int $limit = 10, bool $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createPublishedProductApiAdapter()
+            ->listPerPage($limit, $withCount, $queryParameters);
+    }
 }

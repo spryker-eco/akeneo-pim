@@ -9,6 +9,7 @@ namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Sdk;
 
 use Akeneo\Pim\ApiClient\AkeneoPimClientBuilder;
 use Akeneo\Pim\ApiClient\AkeneoPimClientInterface;
+use Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface;
 use Http\Adapter\Guzzle6\Client;
 use Http\Client\HttpClient;
 use SprykerEco\Service\AkeneoPim\AkeneoPimConfig;
