@@ -1157,4 +1157,74 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
             ->createReferenceEntityMediaFileApiAdapter()
             ->download($code);
     }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $assetCode
+     * @param string $localeCode
+     *
+     * @return array
+     */
+    public function getFromLocalizableAsset(string $assetCode, string $localeCode): array
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetReferenceFileApiAdapter()
+            ->getFromLocalizableAsset($assetCode, $localeCode);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $assetCode
+     *
+     * @return array
+     */
+    public function getFromNotLocalizableAsset(string $assetCode): array
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetReferenceFileApiAdapter()
+            ->getFromNotLocalizableAsset($assetCode);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $assetCode
+     * @param string $localeCode
+     *
+     * @return ResponseInterface
+     */
+    public function downloadFromLocalizableAsset(string $assetCode, string $localeCode): ResponseInterface
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetReferenceFileApiAdapter()
+            ->downloadFromLocalizableAsset($assetCode, $localeCode);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $assetCode
+     *
+     * @return ResponseInterface
+     */
+    public function downloadFromNotLocalizableAsset(string $assetCode): ResponseInterface
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetReferenceFileApiAdapter()
+            ->downloadFromNotLocalizableAsset($assetCode);
+    }
 }

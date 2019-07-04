@@ -10,6 +10,8 @@ namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter;
 use SprykerEco\Service\AkeneoPim\AkeneoPimConfig;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetApiAdapter;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetCategoryApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetReferenceFileApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetReferenceFileApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetTagApiAdapter;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeApiAdapter;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeGroupApiAdapter;
@@ -346,6 +348,17 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createReferenceEntityMediaFileApiAdapter(): ReferenceEntityMediaFileApiAdapterInterface
     {
         return new ReferenceEntityMediaFileApiAdapter(
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->wrapperFactory
+        );
+    }
+
+    /**
+     * @return AssetReferenceFileApiAdapterInterface
+     */
+    public function createAssetReferenceFileApiAdapter(): AssetReferenceFileApiAdapterInterface
+    {
+        return new AssetReferenceFileApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
             $this->wrapperFactory
         );

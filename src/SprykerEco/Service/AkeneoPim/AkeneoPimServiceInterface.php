@@ -832,4 +832,54 @@ interface AkeneoPimServiceInterface
      * @return ResponseInterface
      */
     public function downloadReferenceEntityMediaFile(string $code): ResponseInterface;
+
+    /**
+     * Specification:
+     *  - Gets an asset reference file by its asset code and local code for a localizable asset.
+     *
+     * @api
+     *
+     * @param string $assetCode
+     * @param string $localeCode
+     *
+     * @return array
+     */
+    public function getFromLocalizableAsset(string $assetCode, string $localeCode): array;
+
+    /**
+     * Specification:
+     *  - Gets an asset reference file by its asset code for a not localizable asset.
+     *
+     * @api
+     *
+     * @param string $assetCode
+     *
+     * @return array
+     */
+    public function getFromNotLocalizableAsset(string $assetCode): array;
+
+    /**
+     * Specification:
+     *  - Download an asset reference file by its asset code and local code for a localizable asset.
+     *
+     * @api
+     *
+     * @param string $assetCode
+     * @param string $localeCode
+     *
+     * @return ResponseInterface
+     */
+    public function downloadFromLocalizableAsset(string $assetCode, string $localeCode): ResponseInterface;
+
+    /**
+     * Specification:
+     *  Download an asset reference file by its asset code for a not localizable asset.
+     *
+     * @api
+     *
+     * @param string $assetCode
+     *
+     * @return ResponseInterface
+     */
+    public function downloadFromNotLocalizableAsset(string $assetCode): ResponseInterface;
 }

@@ -7,6 +7,7 @@
 
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter;
 
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetReferenceFileApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeOptionApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Family\FamilyVariantApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product\ProductDraftApiAdapterInterface;
@@ -143,4 +144,9 @@ interface AdapterFactoryInterface
      * @return ReferenceEntityMediaFileApiAdapterInterface
      */
     public function createReferenceEntityMediaFileApiAdapter(): ReferenceEntityMediaFileApiAdapterInterface;
+
+    /**
+     * @return AssetReferenceFileApiAdapterInterface
+     */
+    public function createAssetReferenceFileApiAdapter(): AssetReferenceFileApiAdapterInterface;
 }
