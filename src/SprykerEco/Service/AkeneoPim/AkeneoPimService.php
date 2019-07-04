@@ -8,6 +8,7 @@
 namespace SprykerEco\Service\AkeneoPim;
 
 use Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface;
+use Psr\Http\Message\ResponseInterface;
 use Spryker\Service\Kernel\AbstractService;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface;
@@ -1138,5 +1139,22 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
             ->createAkeneoPimAdapterFactory()
             ->createProductModelApiAdapter()
             ->get($code);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return ResponseInterface
+     */
+    public function downloadReferenceEntityMediaFile(string $code): ResponseInterface
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createReferenceEntityMediaFileApiAdapter()
+            ->download($code);
     }
 }

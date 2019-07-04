@@ -8,6 +8,7 @@
 namespace SprykerEco\Service\AkeneoPim;
 
 use Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface;
+use Psr\Http\Message\ResponseInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface;
 
@@ -819,4 +820,16 @@ interface AkeneoPimServiceInterface
      * @return array
      */
     public function getProductModelDraft(string $code): array;
+
+    /**
+     * Specification:
+     *  - Downloads a reference entity media file by its code
+     *
+     * @api
+     *
+     * @param string $code
+     *
+     * @return ResponseInterface
+     */
+    public function downloadReferenceEntityMediaFile(string $code): ResponseInterface;
 }

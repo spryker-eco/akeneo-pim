@@ -38,6 +38,8 @@ use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEnti
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityAttributeApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityAttributeOptionApiAdapter;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityAttributeOptionApiAdapterInterface;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityMediaFileApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityMediaFileApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityRecordApiAdapter;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityRecordApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Sdk\AkeneoPimSdkFactory;
@@ -333,6 +335,17 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createProductDraftApiAdapter(): ProductDraftApiAdapterInterface
     {
         return new ProductDraftApiAdapter(
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->wrapperFactory
+        );
+    }
+
+    /**
+     * @return ReferenceEntityMediaFileApiAdapterInterface
+     */
+    public function createReferenceEntityMediaFileApiAdapter(): ReferenceEntityMediaFileApiAdapterInterface
+    {
+        return new ReferenceEntityMediaFileApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
             $this->wrapperFactory
         );
