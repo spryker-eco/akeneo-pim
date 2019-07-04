@@ -844,7 +844,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getFromLocalizableAsset(string $assetCode, string $localeCode): array;
+    public function getAssetReferenceFileFromLocalizableAsset(string $assetCode, string $localeCode): array;
 
     /**
      * Specification:
@@ -856,7 +856,7 @@ interface AkeneoPimServiceInterface
      *
      * @return array
      */
-    public function getFromNotLocalizableAsset(string $assetCode): array;
+    public function getAssetReferenceFileFromNotLocalizableAsset(string $assetCode): array;
 
     /**
      * Specification:
@@ -869,11 +869,11 @@ interface AkeneoPimServiceInterface
      *
      * @return ResponseInterface
      */
-    public function downloadFromLocalizableAsset(string $assetCode, string $localeCode): ResponseInterface;
+    public function downloadAssetReferenceFileFromLocalizableAsset(string $assetCode, string $localeCode): ResponseInterface;
 
     /**
      * Specification:
-     *  Download an asset reference file by its asset code for a not localizable asset.
+     *  - Download an asset reference file by its asset code for a not localizable asset.
      *
      * @api
      *
@@ -881,5 +881,59 @@ interface AkeneoPimServiceInterface
      *
      * @return ResponseInterface
      */
-    public function downloadFromNotLocalizableAsset(string $assetCode): ResponseInterface;
+    public function downloadAssetReferenceFileFromNotLocalizableAsset(string $assetCode): ResponseInterface;
+
+    /**
+     * Specification:
+     *  - Gets an asset variation file by its asset code, channel code and local code for a localizable asset.
+     *
+     * @api
+     *
+     * @param string $assetCode
+     * @param string $channelCode
+     * @param string $localeCode
+     *
+     * @return array
+     */
+    public function getAssetVariationFileFromLocalizableAsset(string $assetCode, string $channelCode, string $localeCode): array;
+
+    /**
+     * Specification:
+     *  - Gets an asset variation file by its asset code and channel code for a not localizable asset.
+     *
+     * @api
+     *
+     * @param string $assetCode
+     * @param string $channelCode
+     *
+     * @return array
+     */
+    public function getAssetVariationFileFromNotLocalizableAsset(string $assetCode, string $channelCode): array;
+
+    /**
+     * Specification:
+     *  - Downloads an asset variation file by its asset code, channel code and local code for a localizable asset.
+     *
+     * @api
+     *
+     * @param string $assetCode
+     * @param string $channelCode
+     * @param string $localeCode
+     *
+     * @return ResponseInterface
+     */
+    public function downloadAssetVariationFileFromLocalizableAsset(string $assetCode, string $channelCode, string $localeCode): ResponseInterface;
+
+    /**
+     * Specification:
+     *  - Downloads an asset variation file by its asset code and channel code for a not localizable asset.
+     *
+     * @api
+     *
+     * @param string $assetCode
+     * @param string $channelCode
+     *
+     * @return ResponseInterface
+     */
+    public function downloadAssetVariationFileFromNotLocalizableAsset(string $assetCode, string $channelCode): ResponseInterface;
 }

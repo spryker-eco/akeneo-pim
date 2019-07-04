@@ -1168,7 +1168,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      *
      * @return array
      */
-    public function getFromLocalizableAsset(string $assetCode, string $localeCode): array
+    public function getAssetReferenceFileFromLocalizableAsset(string $assetCode, string $localeCode): array
     {
         return $this->getFactory()
             ->createAkeneoPimAdapterFactory()
@@ -1185,7 +1185,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      *
      * @return array
      */
-    public function getFromNotLocalizableAsset(string $assetCode): array
+    public function getAssetReferenceFileFromNotLocalizableAsset(string $assetCode): array
     {
         return $this->getFactory()
             ->createAkeneoPimAdapterFactory()
@@ -1203,7 +1203,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      *
      * @return ResponseInterface
      */
-    public function downloadFromLocalizableAsset(string $assetCode, string $localeCode): ResponseInterface
+    public function downloadAssetReferenceFileFromLocalizableAsset(string $assetCode, string $localeCode): ResponseInterface
     {
         return $this->getFactory()
             ->createAkeneoPimAdapterFactory()
@@ -1220,11 +1220,85 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      *
      * @return ResponseInterface
      */
-    public function downloadFromNotLocalizableAsset(string $assetCode): ResponseInterface
+    public function downloadAssetReferenceFileFromNotLocalizableAsset(string $assetCode): ResponseInterface
     {
         return $this->getFactory()
             ->createAkeneoPimAdapterFactory()
             ->createAssetReferenceFileApiAdapter()
             ->downloadFromNotLocalizableAsset($assetCode);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $assetCode
+     * @param string $channelCode
+     * @param string $localeCode
+     *
+     * @return array
+     */
+    public function getAssetVariationFileFromLocalizableAsset(string $assetCode, string $channelCode, string $localeCode): array
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetVariationFileApiAdapter()
+            ->getFromLocalizableAsset($assetCode, $channelCode, $localeCode);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $assetCode
+     * @param string $channelCode
+     *
+     * @return array
+     */
+    public function getAssetVariationFileFromNotLocalizableAsset(string $assetCode, string $channelCode): array
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetVariationFileApiAdapter()
+            ->getFromNotLocalizableAsset($assetCode, $channelCode);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $assetCode
+     * @param string $channelCode
+     * @param string $localeCode
+     *
+     * @return ResponseInterface
+     */
+    public function downloadAssetVariationFileFromLocalizableAsset(string $assetCode, string $channelCode, string $localeCode): ResponseInterface
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetVariationFileApiAdapter()
+            ->downloadFromLocalizableAsset($assetCode, $channelCode, $localeCode);
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     *
+     * @param string $assetCode
+     * @param string $channelCode
+     *
+     * @return ResponseInterface
+     */
+    public function downloadAssetVariationFileFromNotLocalizableAsset(string $assetCode, string $channelCode): ResponseInterface
+    {
+        return $this->getFactory()
+            ->createAkeneoPimAdapterFactory()
+            ->createAssetVariationFileApiAdapter()
+            ->downloadFromNotLocalizableAsset($assetCode, $channelCode);
     }
 }

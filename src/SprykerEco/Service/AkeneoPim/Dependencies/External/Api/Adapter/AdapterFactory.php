@@ -13,6 +13,8 @@ use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetCa
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetReferenceFileApiAdapter;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetReferenceFileApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetTagApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetVariationFileApiAdapter;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetVariationFileApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeApiAdapter;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeGroupApiAdapter;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Attributes\AttributeOptionApiAdapter;
@@ -359,6 +361,17 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createAssetReferenceFileApiAdapter(): AssetReferenceFileApiAdapterInterface
     {
         return new AssetReferenceFileApiAdapter(
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->wrapperFactory
+        );
+    }
+
+    /**
+     * @return AssetVariationFileApiAdapterInterface
+     */
+    public function createAssetVariationFileApiAdapter(): AssetVariationFileApiAdapterInterface
+    {
+        return new AssetVariationFileApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
             $this->wrapperFactory
         );
