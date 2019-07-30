@@ -677,7 +677,7 @@ interface AkeneoPimServiceInterface
      *
      * @param array $queryParameters
      *
-     * @return ResourceCursorInterface
+     * @return \Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface
      */
     public function getAllReferenceEntities(array $queryParameters = []): ResourceCursorInterface;
 
@@ -703,7 +703,7 @@ interface AkeneoPimServiceInterface
      * @param string $referenceEntityCode
      * @param array $queryParameters
      *
-     * @return ResourceCursorInterface
+     * @return \Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface
      */
     public function getReferenceEntityRecords(string $referenceEntityCode, array $queryParameters = []): ResourceCursorInterface;
 
@@ -729,7 +729,7 @@ interface AkeneoPimServiceInterface
      * @param string $referenceEntityCode
      * @param array $queryParameters
      *
-     * @return ResourceCursorInterface
+     * @return \Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface
      */
     public function getReferenceEntityAttributes(string $referenceEntityCode, array $queryParameters = []): ResourceCursorInterface;
 
@@ -829,7 +829,7 @@ interface AkeneoPimServiceInterface
      *
      * @param string $code
      *
-     * @return ResponseInterface
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function downloadReferenceEntityMediaFile(string $code): ResponseInterface;
 
@@ -867,7 +867,7 @@ interface AkeneoPimServiceInterface
      * @param string $assetCode
      * @param string $localeCode
      *
-     * @return ResponseInterface
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function downloadAssetReferenceFileFromLocalizableAsset(string $assetCode, string $localeCode): ResponseInterface;
 
@@ -879,7 +879,7 @@ interface AkeneoPimServiceInterface
      *
      * @param string $assetCode
      *
-     * @return ResponseInterface
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function downloadAssetReferenceFileFromNotLocalizableAsset(string $assetCode): ResponseInterface;
 
@@ -920,7 +920,7 @@ interface AkeneoPimServiceInterface
      * @param string $channelCode
      * @param string $localeCode
      *
-     * @return ResponseInterface
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function downloadAssetVariationFileFromLocalizableAsset(string $assetCode, string $channelCode, string $localeCode): ResponseInterface;
 
@@ -933,7 +933,7 @@ interface AkeneoPimServiceInterface
      * @param string $assetCode
      * @param string $channelCode
      *
-     * @return ResponseInterface
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function downloadAssetVariationFileFromNotLocalizableAsset(string $assetCode, string $channelCode): ResponseInterface;
 }

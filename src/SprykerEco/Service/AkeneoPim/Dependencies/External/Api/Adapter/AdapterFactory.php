@@ -232,7 +232,7 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createPublishedProductApiAdapter(): ApiAdapterInterface
     {
         return new PublishedProductApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
             $this->wrapperFactory
         );
     }
@@ -246,40 +246,40 @@ class AdapterFactory implements AdapterFactoryInterface
     }
 
     /**
-     * @return ApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
     public function createAssetApiAdapter(): ApiAdapterInterface
     {
         return new AssetApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
             $this->wrapperFactory
         );
     }
 
     /**
-     * @return ApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
     public function createAssetCategoryApiAdapter(): ApiAdapterInterface
     {
         return new AssetCategoryApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
             $this->wrapperFactory
         );
     }
 
     /**
-     * @return ApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
     public function createAssetTagApiAdapter(): ApiAdapterInterface
     {
         return new AssetTagApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
             $this->wrapperFactory
         );
     }
 
     /**
-     * @return ReferenceEntityApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityApiAdapterInterface
      */
     public function createReferenceEntityApiAdapter(): ReferenceEntityApiAdapterInterface
     {
@@ -290,7 +290,7 @@ class AdapterFactory implements AdapterFactoryInterface
     }
 
     /**
-     * @return ReferenceEntityRecordApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityRecordApiAdapterInterface
      */
     public function createReferenceEntityRecordApiAdapter(): ReferenceEntityRecordApiAdapterInterface
     {
@@ -301,7 +301,7 @@ class AdapterFactory implements AdapterFactoryInterface
     }
 
     /**
-     * @return ReferenceEntityAttributeApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityAttributeApiAdapterInterface
      */
     public function createReferenceEntityAttributeApiAdapter(): ReferenceEntityAttributeApiAdapterInterface
     {
@@ -312,67 +312,67 @@ class AdapterFactory implements AdapterFactoryInterface
     }
 
     /**
-     * @return ReferenceEntityAttributeOptionApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityAttributeOptionApiAdapterInterface
      */
     public function createReferenceEntityAttributeOptionApiAdapter(): ReferenceEntityAttributeOptionApiAdapterInterface
     {
         return new ReferenceEntityAttributeOptionApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
             $this->wrapperFactory
         );
     }
 
     /**
-     * @return ProductModelDraftApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product\ProductModelDraftApiAdapterInterface
      */
     public function createProductModelDraftApiAdapter(): ProductModelDraftApiAdapterInterface
     {
         return new ProductModelDraftApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
             $this->wrapperFactory
         );
     }
 
     /**
-     * @return ProductDraftApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product\ProductDraftApiAdapterInterface
      */
     public function createProductDraftApiAdapter(): ProductDraftApiAdapterInterface
     {
         return new ProductDraftApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
             $this->wrapperFactory
         );
     }
 
     /**
-     * @return ReferenceEntityMediaFileApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityMediaFileApiAdapterInterface
      */
     public function createReferenceEntityMediaFileApiAdapter(): ReferenceEntityMediaFileApiAdapterInterface
     {
         return new ReferenceEntityMediaFileApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
             $this->wrapperFactory
         );
     }
 
     /**
-     * @return AssetReferenceFileApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetReferenceFileApiAdapterInterface
      */
     public function createAssetReferenceFileApiAdapter(): AssetReferenceFileApiAdapterInterface
     {
         return new AssetReferenceFileApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
             $this->wrapperFactory
         );
     }
 
     /**
-     * @return AssetVariationFileApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetVariationFileApiAdapterInterface
      */
     public function createAssetVariationFileApiAdapter(): AssetVariationFileApiAdapterInterface
     {
         return new AssetVariationFileApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
             $this->wrapperFactory
         );
     }

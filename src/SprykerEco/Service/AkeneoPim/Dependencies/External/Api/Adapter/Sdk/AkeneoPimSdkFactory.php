@@ -9,6 +9,7 @@ namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Sdk;
 
 use Akeneo\Pim\ApiClient\AkeneoPimClientBuilder;
 use Akeneo\Pim\ApiClient\AkeneoPimClientInterface;
+use Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientBuilder;
 use Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface;
 use Http\Adapter\Guzzle6\Client;
 use Http\Client\HttpClient;
@@ -31,6 +32,29 @@ class AkeneoPimSdkFactory implements AkeneoPimSdkFactoryInterface
         );
 
         return $clientBuilder->buildAuthenticatedByPassword(
+            $config->getClientId(),
+            $config->getClientSecret(),
+            $config->getUsername(),
+            $config->getPassword()
+        );
+    }
+
+    /**
+     * @param \SprykerEco\Service\AkeneoPim\AkeneoPimConfig $config
+     *
+     * @return \Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface
+     */
+    public function createAkeneoPimEnterpriseClient(AkeneoPimConfig $config): AkeneoPimEnterpriseClientInterface
+    {
+        $enterpriseClientBuilder = new AkeneoPimEnterpriseClientBuilder(
+            $config->getHost()
+        );
+
+        $enterpriseClientBuilder->setHttpClient(
+            $this->createHttpClient()
+        );
+
+        return $enterpriseClientBuilder->buildAuthenticatedByPassword(
             $config->getClientId(),
             $config->getClientSecret(),
             $config->getUsername(),

@@ -7,7 +7,6 @@
 
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product;
 
-use Akeneo\Pim\ApiClient\AkeneoPimClientInterface;
 use Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface;
@@ -17,7 +16,7 @@ use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactor
 class PublishedProductApiAdapter implements ApiAdapterInterface
 {
     /**
-     * @var AkeneoPimEnterpriseClientInterface
+     * @var \Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface
      */
     protected $akeneoPimClient;
 
@@ -27,7 +26,7 @@ class PublishedProductApiAdapter implements ApiAdapterInterface
     protected $wrapperFactory;
 
     /**
-     * @param AkeneoPimEnterpriseClientInterface $akeneoPimClient
+     * @param \Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface $akeneoPimClient
      * @param \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface $wrapperFactory
      */
     public function __construct(AkeneoPimEnterpriseClientInterface $akeneoPimClient, WrapperFactoryInterface $wrapperFactory)
@@ -53,7 +52,7 @@ class PublishedProductApiAdapter implements ApiAdapterInterface
      * @param bool $withCount
      * @param array $queryParameters
      *
-     * @return AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function listPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface
     {
@@ -69,7 +68,7 @@ class PublishedProductApiAdapter implements ApiAdapterInterface
      * @param int $pageSize
      * @param array $queryParameters
      *
-     * @return AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function all($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface
     {

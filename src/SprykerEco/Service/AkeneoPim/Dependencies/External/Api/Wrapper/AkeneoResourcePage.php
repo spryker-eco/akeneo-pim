@@ -50,6 +50,7 @@ class AkeneoResourcePage implements AkeneoResourcePageInterface
     {
         $previousPage = $this->page
             ->getPreviousPage();
+
         if (!$previousPage) {
             return null;
         }

@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * MIT License
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
 
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset;
 
@@ -22,7 +26,7 @@ class AssetApiAdapter implements ApiAdapterInterface
     protected $wrapperFactory;
 
     /**
-     * @param AkeneoPimEnterpriseClientInterface $akeneoPimClient
+     * @param \Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface $akeneoPimClient
      * @param \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface $wrapperFactory
      */
     public function __construct(AkeneoPimEnterpriseClientInterface $akeneoPimClient, WrapperFactoryInterface $wrapperFactory)
@@ -48,7 +52,7 @@ class AssetApiAdapter implements ApiAdapterInterface
      * @param bool $withCount
      * @param array $queryParameters
      *
-     * @return AkeneoResourcePageInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
      */
     public function listPerPage($limit = 10, $withCount = false, array $queryParameters = []): AkeneoResourcePageInterface
     {
@@ -64,7 +68,7 @@ class AssetApiAdapter implements ApiAdapterInterface
      * @param int $pageSize
      * @param array $queryParameters
      *
-     * @return AkeneoResourceCursorInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
      */
     public function all($pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface
     {

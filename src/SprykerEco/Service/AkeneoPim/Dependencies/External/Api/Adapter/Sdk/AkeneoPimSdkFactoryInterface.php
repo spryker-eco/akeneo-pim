@@ -16,7 +16,14 @@ interface AkeneoPimSdkFactoryInterface
     /**
      * @param \SprykerEco\Service\AkeneoPim\AkeneoPimConfig $config
      *
-     * @return \Akeneo\Pim\ApiClient\AkeneoPimClientInterface|AkeneoPimEnterpriseClientInterface
+     * @return \Akeneo\Pim\ApiClient\AkeneoPimClientInterface
      */
     public function createAkeneoPimClient(AkeneoPimConfig $config): AkeneoPimClientInterface;
+
+    /**
+     * @param \SprykerEco\Service\AkeneoPim\AkeneoPimConfig $config
+     *
+     * @return \Akeneo\Pim\ApiClient\AkeneoPimClientInterface|\Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface
+     */
+    public function createAkeneoPimEnterpriseClient(AkeneoPimConfig $config): AkeneoPimEnterpriseClientInterface;
 }

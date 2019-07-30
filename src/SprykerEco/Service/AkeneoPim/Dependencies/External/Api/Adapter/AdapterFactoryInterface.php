@@ -92,12 +92,12 @@ interface AdapterFactoryInterface
     public function createProductModelApiAdapter(): ApiAdapterInterface;
 
     /**
-     * @return ProductModelDraftApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product\ProductModelDraftApiAdapterInterface
      */
     public function createProductModelDraftApiAdapter(): ProductModelDraftApiAdapterInterface;
 
     /**
-     * @return ProductDraftApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product\ProductDraftApiAdapterInterface
      */
     public function createProductDraftApiAdapter(): ProductDraftApiAdapterInterface;
 
@@ -107,52 +107,52 @@ interface AdapterFactoryInterface
     public function createPublishedProductApiAdapter(): ApiAdapterInterface;
 
     /**
-     * @return ApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
     public function createAssetApiAdapter(): ApiAdapterInterface;
 
     /**
-     * @return ApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
     public function createAssetTagApiAdapter(): ApiAdapterInterface;
 
     /**
-     * @return ApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ApiAdapterInterface
      */
     public function createAssetCategoryApiAdapter(): ApiAdapterInterface;
 
     /**
-     * @return ReferenceEntityApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityApiAdapterInterface
      */
     public function createReferenceEntityApiAdapter(): ReferenceEntityApiAdapterInterface;
 
     /**
-     * @return ReferenceEntityRecordApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityRecordApiAdapterInterface
      */
     public function createReferenceEntityRecordApiAdapter(): ReferenceEntityRecordApiAdapterInterface;
 
     /**
-     * @return ReferenceEntityAttributeApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityAttributeApiAdapterInterface
      */
     public function createReferenceEntityAttributeApiAdapter(): ReferenceEntityAttributeApiAdapterInterface;
 
     /**
-     * @return ReferenceEntityAttributeOptionApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityAttributeOptionApiAdapterInterface
      */
     public function createReferenceEntityAttributeOptionApiAdapter(): ReferenceEntityAttributeOptionApiAdapterInterface;
 
     /**
-     * @return ReferenceEntityMediaFileApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\ReferenceEntity\ReferenceEntityMediaFileApiAdapterInterface
      */
     public function createReferenceEntityMediaFileApiAdapter(): ReferenceEntityMediaFileApiAdapterInterface;
 
     /**
-     * @return AssetReferenceFileApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetReferenceFileApiAdapterInterface
      */
     public function createAssetReferenceFileApiAdapter(): AssetReferenceFileApiAdapterInterface;
 
     /**
-     * @return AssetVariationFileApiAdapterInterface
+     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset\AssetVariationFileApiAdapterInterface
      */
     public function createAssetVariationFileApiAdapter(): AssetVariationFileApiAdapterInterface;
 }

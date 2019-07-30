@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * MIT License
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset;
 
 use Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface;
@@ -19,7 +24,7 @@ class AssetReferenceFileApiAdapter implements AssetReferenceFileApiAdapterInterf
     protected $wrapperFactory;
 
     /**
-     * @param AkeneoPimEnterpriseClientInterface $akeneoPimClient
+     * @param \Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface $akeneoPimClient
      * @param \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface $wrapperFactory
      */
     public function __construct(AkeneoPimEnterpriseClientInterface $akeneoPimClient, WrapperFactoryInterface $wrapperFactory)
@@ -57,7 +62,7 @@ class AssetReferenceFileApiAdapter implements AssetReferenceFileApiAdapterInterf
      * @param string $assetCode
      * @param string $localeCode
      *
-     * @return ResponseInterface
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function downloadFromLocalizableAsset(string $assetCode, string $localeCode): ResponseInterface
     {
@@ -69,7 +74,7 @@ class AssetReferenceFileApiAdapter implements AssetReferenceFileApiAdapterInterf
     /**
      * @param string $assetCode
      *
-     * @return ResponseInterface
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function downloadFromNotLocalizableAsset(string $assetCode): ResponseInterface
     {

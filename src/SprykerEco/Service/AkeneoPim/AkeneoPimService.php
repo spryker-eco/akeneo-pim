@@ -934,7 +934,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      *
      * @param array $queryParameters
      *
-     * @return ResourceCursorInterface
+     * @return \Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface
      */
     public function getAllReferenceEntities(array $queryParameters = []): ResourceCursorInterface
     {
@@ -970,7 +970,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param string $referenceEntityCode
      * @param array $queryParameters
      *
-     * @return ResourceCursorInterface
+     * @return \Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface
      */
     public function getReferenceEntityRecords(string $referenceEntityCode, array $queryParameters = []): ResourceCursorInterface
     {
@@ -1006,7 +1006,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param string $referenceEntityCode
      * @param array $queryParameters
      *
-     * @return ResourceCursorInterface
+     * @return \Akeneo\Pim\ApiClient\Pagination\ResourceCursorInterface
      */
     public function getReferenceEntityAttributes(string $referenceEntityCode, array $queryParameters = []): ResourceCursorInterface
     {
@@ -1148,7 +1148,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      *
      * @param string $code
      *
-     * @return ResponseInterface
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function downloadReferenceEntityMediaFile(string $code): ResponseInterface
     {
@@ -1201,7 +1201,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param string $assetCode
      * @param string $localeCode
      *
-     * @return ResponseInterface
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function downloadAssetReferenceFileFromLocalizableAsset(string $assetCode, string $localeCode): ResponseInterface
     {
@@ -1218,7 +1218,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      *
      * @param string $assetCode
      *
-     * @return ResponseInterface
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function downloadAssetReferenceFileFromNotLocalizableAsset(string $assetCode): ResponseInterface
     {
@@ -1274,7 +1274,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param string $channelCode
      * @param string $localeCode
      *
-     * @return ResponseInterface
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function downloadAssetVariationFileFromLocalizableAsset(string $assetCode, string $channelCode, string $localeCode): ResponseInterface
     {
@@ -1292,7 +1292,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param string $assetCode
      * @param string $channelCode
      *
-     * @return ResponseInterface
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function downloadAssetVariationFileFromNotLocalizableAsset(string $assetCode, string $channelCode): ResponseInterface
     {
