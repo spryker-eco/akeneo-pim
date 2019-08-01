@@ -284,8 +284,7 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createReferenceEntityApiAdapter(): ReferenceEntityApiAdapterInterface
     {
         return new ReferenceEntityApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config)
         );
     }
 
@@ -295,8 +294,7 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createReferenceEntityRecordApiAdapter(): ReferenceEntityRecordApiAdapterInterface
     {
         return new ReferenceEntityRecordApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config)
         );
     }
 
@@ -306,8 +304,7 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createReferenceEntityAttributeApiAdapter(): ReferenceEntityAttributeApiAdapterInterface
     {
         return new ReferenceEntityAttributeApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config)
         );
     }
 
@@ -317,8 +314,7 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createReferenceEntityAttributeOptionApiAdapter(): ReferenceEntityAttributeOptionApiAdapterInterface
     {
         return new ReferenceEntityAttributeOptionApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
-            $this->wrapperFactory
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config)
         );
     }
 
@@ -328,8 +324,7 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createProductModelDraftApiAdapter(): ProductModelDraftApiAdapterInterface
     {
         return new ProductModelDraftApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
-            $this->wrapperFactory
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config)
         );
     }
 
@@ -339,8 +334,7 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createProductDraftApiAdapter(): ProductDraftApiAdapterInterface
     {
         return new ProductDraftApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
-            $this->wrapperFactory
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config)
         );
     }
 
@@ -350,8 +344,7 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createReferenceEntityMediaFileApiAdapter(): ReferenceEntityMediaFileApiAdapterInterface
     {
         return new ReferenceEntityMediaFileApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
-            $this->wrapperFactory
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config)
         );
     }
 
@@ -361,8 +354,7 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createAssetReferenceFileApiAdapter(): AssetReferenceFileApiAdapterInterface
     {
         return new AssetReferenceFileApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
-            $this->wrapperFactory
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config)
         );
     }
 
@@ -372,8 +364,7 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createAssetVariationFileApiAdapter(): AssetVariationFileApiAdapterInterface
     {
         return new AssetVariationFileApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config),
-            $this->wrapperFactory
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config)
         );
     }
 }

@@ -17,12 +17,12 @@ interface AkeneoResourcePageInterface
     /**
      * @return $this|null
      */
-    public function getPreviousPage(): ?AkeneoResourcePageInterface;
+    public function getPreviousPage();
 
     /**
      * @return $this|null
      */
-    public function getNextPage(): ?AkeneoResourcePageInterface;
+    public function getNextPage();
 
     /**
      * @return int|null
