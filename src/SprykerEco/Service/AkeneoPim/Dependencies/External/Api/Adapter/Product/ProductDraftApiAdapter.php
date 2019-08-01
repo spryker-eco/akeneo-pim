@@ -29,7 +29,7 @@ class ProductDraftApiAdapter implements ProductDraftApiAdapterInterface
      *
      * @return array
      */
-    public function get($code): array
+    public function get($code)
     {
         return $this->akeneoPimClient
             ->getProductDraftApi()
