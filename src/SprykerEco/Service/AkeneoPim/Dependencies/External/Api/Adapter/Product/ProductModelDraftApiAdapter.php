@@ -8,7 +8,6 @@
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product;
 
 use Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface;
-use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface;
 
 class ProductModelDraftApiAdapter implements ProductModelDraftApiAdapterInterface
 {
@@ -18,18 +17,11 @@ class ProductModelDraftApiAdapter implements ProductModelDraftApiAdapterInterfac
     protected $akeneoPimClient;
 
     /**
-     * @var \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface
-     */
-    protected $wrapperFactory;
-
-    /**
      * @param \Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface $akeneoPimClient
-     * @param \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface $wrapperFactory
      */
-    public function __construct(AkeneoPimEnterpriseClientInterface $akeneoPimClient, WrapperFactoryInterface $wrapperFactory)
+    public function __construct(AkeneoPimEnterpriseClientInterface $akeneoPimClient)
     {
         $this->akeneoPimClient = $akeneoPimClient;
-        $this->wrapperFactory = $wrapperFactory;
     }
 
     /**

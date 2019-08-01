@@ -9,7 +9,6 @@ namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Asset;
 
 use Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface;
 use Psr\Http\Message\ResponseInterface;
-use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface;
 
 class AssetVariationFileApiAdapter implements AssetVariationFileApiAdapterInterface
 {
@@ -19,18 +18,11 @@ class AssetVariationFileApiAdapter implements AssetVariationFileApiAdapterInterf
     protected $akeneoPimClient;
 
     /**
-     * @var \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface
-     */
-    protected $wrapperFactory;
-
-    /**
      * @param \Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface $akeneoPimClient
-     * @param \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\WrapperFactoryInterface $wrapperFactory
      */
-    public function __construct(AkeneoPimEnterpriseClientInterface $akeneoPimClient, WrapperFactoryInterface $wrapperFactory)
+    public function __construct(AkeneoPimEnterpriseClientInterface $akeneoPimClient)
     {
         $this->akeneoPimClient = $akeneoPimClient;
-        $this->wrapperFactory = $wrapperFactory;
     }
 
     /**

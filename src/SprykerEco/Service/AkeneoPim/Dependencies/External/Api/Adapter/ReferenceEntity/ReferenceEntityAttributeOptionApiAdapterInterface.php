@@ -10,17 +10,17 @@ namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Referen
 interface ReferenceEntityAttributeOptionApiAdapterInterface
 {
     /**
-     * @param string $referenceEntityCode Code of the reference entity
-     * @param string $attributeCode Code of the attribute
-     * @param string $attributeOptionCode Code of the attribute option
+     * @param string $referenceEntityCode
+     * @param string $attributeCode
+     * @param string $attributeOptionCode
      *
      * @return array
      */
     public function get(string $referenceEntityCode, string $attributeCode, string $attributeOptionCode): array;
 
     /**
-     * @param string $referenceEntityCode Code of the reference entity
-     * @param string $attributeCode Code of the attribute
+     * @param string $referenceEntityCode
+     * @param string $attributeCode
      *
      * @return array
      */

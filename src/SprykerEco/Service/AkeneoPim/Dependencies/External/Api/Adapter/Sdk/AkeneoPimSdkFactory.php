@@ -46,9 +46,7 @@ class AkeneoPimSdkFactory implements AkeneoPimSdkFactoryInterface
      */
     public function createAkeneoPimEnterpriseClient(AkeneoPimConfig $config): AkeneoPimEnterpriseClientInterface
     {
-        $enterpriseClientBuilder = new AkeneoPimEnterpriseClientBuilder(
-            $config->getHost()
-        );
+        $enterpriseClientBuilder = new AkeneoPimEnterpriseClientBuilder($config->getHost());
 
         $enterpriseClientBuilder->setHttpClient(
             $this->createHttpClient()

@@ -753,7 +753,6 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param array $queryParameters
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
-     *
      */
     public function getAllAssets(int $pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface
     {
@@ -771,7 +770,6 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param string $code
      *
      * @return array
-
      */
     public function getAsset(string $code): array
     {
@@ -863,8 +861,6 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
      * @param array $queryParameters
      *
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourceCursorInterface
-     * @api
-     *
      */
     public function getAllAssetCategories(int $pageSize = 10, array $queryParameters = []): AkeneoResourceCursorInterface
     {

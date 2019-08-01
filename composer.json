@@ -4,7 +4,7 @@
   "license": "MIT",
   "require": {
     "php": ">=7.1",
-    "spryker/kernel": "^3.0.0",
+    "spryker/kernel": "^3.30.0",
     "akeneo/api-php-client-ee": "^4.0.0",
     "php-http/guzzle6-adapter": "^2.0.0"
   },

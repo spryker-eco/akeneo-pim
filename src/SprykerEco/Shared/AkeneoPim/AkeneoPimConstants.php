@@ -12,9 +12,43 @@ namespace SprykerEco\Shared\AkeneoPim;
  */
 interface AkeneoPimConstants
 {
+    /**
+     * Specification:
+     * - Akeneo host url.
+     *
+     * @api
+     */
     public const HOST = 'AKENEOPIM:HOST';
+
+    /**
+     * Specification:
+     * - Akeneo username.
+     *
+     * @api
+     */
     public const USERNAME = 'AKENEOPIM:USERNAME';
+
+    /**
+     * Specification:
+     * - Akeneo password.
+     *
+     * @api
+     */
     public const PASSWORD = 'AKENEOPIM:PASSWORD';
+
+    /**
+     * Specification:
+     * - Akeneo public client id.
+     *
+     * @api
+     */
     public const CLIENT_ID = 'AKENEOPIM:CLIENT_ID';
+
+    /**
+     * Specification:
+     * - Akeneo client secret key.
+     *
+     * @api
+     */
     public const CLIENT_SECRET = 'AKENEOPIM:CLIENT_SECRET';
 }

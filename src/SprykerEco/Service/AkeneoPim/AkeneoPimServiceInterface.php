@@ -200,7 +200,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a attribute by its code
+     *  - Gets an attribute by its code.
      *
      * @api
      *
@@ -212,7 +212,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a attribute group by its code
+     *  - Gets an attribute group by its code.
      *
      * @api
      *
@@ -224,7 +224,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a attribute option group by its code
+     *  - Gets an attribute option group by its code.
      *
      * @api
      *
@@ -237,7 +237,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a category by its code
+     *  - Gets a category by its code.
      *
      * @api
      *
@@ -249,7 +249,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a channel by its code
+     *  - Gets a channel by its code.
      *
      * @api
      *
@@ -261,7 +261,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a currency by its code
+     *  - Gets a currency by its code.
      *
      * @api
      *
@@ -273,7 +273,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a locale by its code
+     *  - Gets a locale by its code.
      *
      * @api
      *
@@ -285,7 +285,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a family by its code
+     *  - Gets a family by its code.
      *
      * @api
      *
@@ -297,7 +297,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a family variant by its code
+     *  - Gets a family variant by its code.
      *
      * @api
      *
@@ -310,7 +310,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a measure family by its code
+     *  - Gets a measure family by its code.
      *
      * @api
      *
@@ -322,7 +322,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a product by its code
+     *  - Gets a product by its code.
      *
      * @api
      *
@@ -334,7 +334,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a product media file by its code
+     *  - Gets a product media file by its code.
      *
      * @api
      *
@@ -346,7 +346,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a product model by its code
+     *  - Gets a product model by its code.
      *
      * @api
      *
@@ -555,7 +555,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets an asset by its code
+     *  - Gets an asset by its code.
      *
      * @api
      *
@@ -594,7 +594,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets an asset tag by its code
+     *  - Gets an asset tag by its code.
      *
      * @api
      *
@@ -633,7 +633,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets an asset category by its code
+     *  - Gets an asset category by its code.
      *
      * @api
      *
@@ -735,7 +735,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     * - Get an attribute option for a given attribute of a given reference entity.
+     * - Gets an attribute option for a given attribute of a given reference entity.
      *
      * @param string $referenceEntityCode
      * @param string $attributeCode
@@ -747,7 +747,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     * - Get the list of attribute options of a given attribute for a given reference entity.
+     * - Gets the list of attribute options of a given attribute for a given reference entity.
      *
      * @api
      *
@@ -760,7 +760,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a published product by its code
+     *  - Gets a published product by its code.
      *
      * @api
      *
@@ -799,7 +799,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a product draft by its code
+     *  - Gets a product draft by its code.
      *
      * @api
      *
@@ -811,7 +811,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Gets a product model draft by its code
+     *  - Gets a product model draft by its code.
      *
      * @api
      *
@@ -823,7 +823,7 @@ interface AkeneoPimServiceInterface
 
     /**
      * Specification:
-     *  - Downloads a reference entity media file by its code
+     *  - Downloads a reference entity media file by its code.
      *
      * @api
      *
