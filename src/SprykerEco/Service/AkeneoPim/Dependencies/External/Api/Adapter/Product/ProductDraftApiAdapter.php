@@ -7,6 +7,7 @@
 
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Product;
 
+use Akeneo\Pim\ApiClient\Exception\HttpException;
 use Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientInterface;
 
 class ProductDraftApiAdapter implements ProductDraftApiAdapterInterface
@@ -25,11 +26,13 @@ class ProductDraftApiAdapter implements ProductDraftApiAdapterInterface
     }
 
     /**
-     * @param string $code
+     * @param string $code Code of the resource
+     *
+     * @throws HttpException If the request failed.
      *
      * @return array
      */
-    public function get($code)
+    public function get(string $code): array
     {
         return $this->akeneoPimClient
             ->getProductDraftApi()

@@ -284,7 +284,7 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createReferenceEntityApiAdapter(): ReferenceEntityApiAdapterInterface
     {
         return new ReferenceEntityApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config)
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config)
         );
     }
 
@@ -294,7 +294,7 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createReferenceEntityRecordApiAdapter(): ReferenceEntityRecordApiAdapterInterface
     {
         return new ReferenceEntityRecordApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config)
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config)
         );
     }
 
@@ -304,7 +304,7 @@ class AdapterFactory implements AdapterFactoryInterface
     public function createReferenceEntityAttributeApiAdapter(): ReferenceEntityAttributeApiAdapterInterface
     {
         return new ReferenceEntityAttributeApiAdapter(
-            $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config)
+            $this->createAkeneoPimSdkFactory()->createAkeneoPimEnterpriseClient($this->config)
         );
     }
 
