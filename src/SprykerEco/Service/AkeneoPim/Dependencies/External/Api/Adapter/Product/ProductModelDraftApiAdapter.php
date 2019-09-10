@@ -25,11 +25,15 @@ class ProductModelDraftApiAdapter implements ProductModelDraftApiAdapterInterfac
     }
 
     /**
-     * @param string $code
+     * Gets a resource by its code
+     *
+     * @param string $code Code of the resource
+     *
+     * @throws \Akeneo\Pim\ApiClient\Exception\HttpException If the request failed.
      *
      * @return array
      */
-    public function get($code)
+    public function get(string $code): array
     {
         return $this->akeneoPimClient
             ->getProductModelDraftApi()
