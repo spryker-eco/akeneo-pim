@@ -25,7 +25,7 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @return int
      */
@@ -36,7 +36,7 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @return mixed
      */
@@ -47,7 +47,7 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @return mixed
      */
@@ -69,7 +69,7 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @return bool
      */
@@ -80,7 +80,7 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @return void
      */
