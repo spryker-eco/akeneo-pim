@@ -4,22 +4,22 @@
     xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
 
     <transfer name="AkeneoPimImport">
-        <property name="config" type="AkeneoPimImportConfig" />
-        <property name="options" type="AkeneoPimImportOptions" />
-        <property name="report" type="AkeneoPimImportReport" />
+        <property name="config" type="AkeneoPimImportConfig"/>
+        <property name="options" type="AkeneoPimImportOptions"/>
+        <property name="report" type="AkeneoPimImportReport"/>
     </transfer>
 
     <transfer name="AkeneoPimImportConfig">
-        <property name="type" type="string" />
+        <property name="type" type="string"/>
     </transfer>
 
     <transfer name="AkeneoPimImportOptions">
-        <property name="channel" type="string" />
-        <property name="locale" type="string" />
+        <property name="channel" type="string"/>
+        <property name="locale" type="string"/>
     </transfer>
 
     <transfer name="AkeneoPimImportReport">
-        <property name="result" type="string" />
+        <property name="result" type="string"/>
     </transfer>
 
 </transfers>
