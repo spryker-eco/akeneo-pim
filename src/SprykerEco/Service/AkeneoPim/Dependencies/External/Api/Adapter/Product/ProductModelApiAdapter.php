@@ -36,7 +36,7 @@ class ProductModelApiAdapter implements ApiAdapterInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @param string $code Code of the resource
      *
@@ -50,7 +50,7 @@ class ProductModelApiAdapter implements ApiAdapterInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @param int $limit The maximum number of resources to return.
      *                               Do note that the server has a maximum limit allowed.
@@ -71,7 +71,7 @@ class ProductModelApiAdapter implements ApiAdapterInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @param int $pageSize The size of the page returned by the server.
      *                               Do note that the server has a maximum limit allowed.

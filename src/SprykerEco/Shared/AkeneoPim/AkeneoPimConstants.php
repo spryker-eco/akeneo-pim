@@ -7,6 +7,9 @@
 
 namespace SprykerEco\Shared\AkeneoPim;
 
+/**
+ * Declares global environment configuration keys. Do not use it for other class constants.
+ */
 interface AkeneoPimConstants
 {
     public const HOST = 'AKENEOPIM:HOST';
