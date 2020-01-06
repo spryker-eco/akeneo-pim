@@ -17,7 +17,7 @@ use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourc
 class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterface
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -35,7 +35,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -53,7 +53,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -71,7 +71,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -90,7 +90,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -108,7 +108,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -126,7 +126,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -144,7 +144,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -162,7 +162,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -180,7 +180,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -199,7 +199,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -217,7 +217,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -235,7 +235,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -253,7 +253,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -271,7 +271,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -288,7 +288,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -305,7 +305,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -323,7 +323,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -340,7 +340,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -357,7 +357,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -374,7 +374,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -391,7 +391,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -408,7 +408,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -426,7 +426,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -443,7 +443,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -460,7 +460,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -477,7 +477,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -494,7 +494,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -513,7 +513,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -532,7 +532,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -552,7 +552,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -571,7 +571,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -590,7 +590,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -609,7 +609,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -628,7 +628,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -647,7 +647,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -667,7 +667,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -686,7 +686,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -705,7 +705,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -724,7 +724,7 @@ class AkeneoPimService extends AbstractService implements AkeneoPimServiceInterf
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *

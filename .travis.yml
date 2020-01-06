@@ -11,11 +11,11 @@ matrix:
     - php: 7.2
       env:
         - PRODUCT_NAME=suite
-      
+
     - php: 7.2
       env:
         - PRODUCT_NAME=b2c-demo-shop
-      
+
     - php: 7.2
       env:
         - PRODUCT_NAME=b2b-demo-shop
@@ -31,6 +31,7 @@ addons:
   apt:
     packages:
       - graphviz
+      - rabbitmq-server
 
   hosts:
     - zed.de.spryker.test
@@ -43,9 +44,6 @@ env:
     - MODULE_DIR=module
     - SHOP_DIR=current
     - MODULE_NAME=akeneo-pim
-
-before_install:
-  - phpenv config-rm xdebug.ini
 
 cache:
   directories:

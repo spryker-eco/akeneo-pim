@@ -35,8 +35,7 @@ class AttributeOptionApiAdapter implements AttributeOptionApiAdapterInterface
     }
 
     /**
-     * {@inheritdoc}
-     *
+     * @param string $attributeCode Code of the attribute
      * @param string $code Code of the resource
      *
      * @return array
@@ -49,7 +48,7 @@ class AttributeOptionApiAdapter implements AttributeOptionApiAdapterInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @param string $attributeCode
      * @param int $limit
@@ -69,7 +68,7 @@ class AttributeOptionApiAdapter implements AttributeOptionApiAdapterInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @param string $attributeCode
      * @param int $pageSize

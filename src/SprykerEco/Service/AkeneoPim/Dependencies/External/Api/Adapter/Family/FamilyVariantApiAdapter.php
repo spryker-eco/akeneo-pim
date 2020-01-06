@@ -35,7 +35,7 @@ class FamilyVariantApiAdapter implements FamilyVariantApiAdapterInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @param string $familyCode Code of the parent family
      * @param string $familyVariantCode Code of the family variant
@@ -50,7 +50,7 @@ class FamilyVariantApiAdapter implements FamilyVariantApiAdapterInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @param string $familyCode
      * @param int $limit
@@ -70,7 +70,7 @@ class FamilyVariantApiAdapter implements FamilyVariantApiAdapterInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @param string $familyCode
      * @param int $pageSize
