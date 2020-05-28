@@ -10,9 +10,9 @@ namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper;
 interface AkeneoResourcePageInterface
 {
     /**
-     * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface
+     * @return $this
      */
-    public function getFirstPage(): AkeneoResourcePageInterface;
+    public function getFirstPage(): self;
 
     /**
      * @return \SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Wrapper\AkeneoResourcePageInterface|null
