@@ -13,6 +13,8 @@ use SprykerEco\Shared\AkeneoPim\AkeneoPimConstants;
 class AkeneoPimConfig extends AbstractBundleConfig
 {
     /**
+     * @api
+     *
      * @return string
      */
     public function getHost(): string
@@ -21,6 +23,8 @@ class AkeneoPimConfig extends AbstractBundleConfig
     }
 
     /**
+     * @api
+     *
      * @return string
      */
     public function getUsername(): string
@@ -29,6 +33,8 @@ class AkeneoPimConfig extends AbstractBundleConfig
     }
 
     /**
+     * @api
+     *
      * @return string
      */
     public function getPassword(): string
@@ -37,6 +43,8 @@ class AkeneoPimConfig extends AbstractBundleConfig
     }
 
     /**
+     * @api
+     *
      * @return string
      */
     public function getClientId(): string
@@ -45,6 +53,8 @@ class AkeneoPimConfig extends AbstractBundleConfig
     }
 
     /**
+     * @api
+     *
      * @return string
      */
     public function getClientSecret(): string
