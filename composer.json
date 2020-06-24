@@ -2,7 +2,7 @@
   "name": "spryker-eco/akeneo-pim",
   "type": "library",
   "description": "AkeneoPim module",
-  "license": "proprietary",
+  "license": "MIT",
   "require": {
     "akeneo/api-php-client": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0",
     "php": ">=7.2",
