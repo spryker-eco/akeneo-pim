@@ -8,4 +8,6 @@
 *.AppleDouble
 *.AppleDB
 *.AppleDesktop
-phpstan.json
+
+vendor/
+composer.lock
