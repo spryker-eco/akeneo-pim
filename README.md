@@ -12,4 +12,4 @@ composer require spryker-eco/akeneo-pim
 
 ## Documentation
 
-[Documentation](https://documentation.spryker.com/industry_partners/performance/akeneo/akeneo.htm)
+[Documentation](https://docs.spryker.com/docs/scos/dev/technology-partner-guides/202108.0/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html)
