@@ -8,19 +8,20 @@
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\HttpClient;
 
 use GuzzleHttp\Client as GuzzleHttpClient;
+use GuzzleHttp\ClientInterface;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Middleware;
 use GuzzleHttp\Utils;
 use Http\Client\HttpClient;
 use Http\Promise\Promise as HttpPromise;
-use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use function GuzzleHttp\choose_handler;
 
 class Client implements HttpClient
 {
     /**
-     * @var \Psr\Http\Client\ClientInterface
+     * @var \GuzzleHttp\ClientInterface
      */
     protected ClientInterface $client;
 
@@ -52,11 +53,9 @@ class Client implements HttpClient
     }
 
     /**
-     * @param array<string, mixed> $config
-     *
-     * @return \GuzzleHttp\Client
+     * @return \GuzzleHttp\ClientInterface
      */
-    protected function buildClient(): GuzzleHttpClient
+    protected function buildClient(): ClientInterface
     {
         $handlerStack = $this->createHandlerStack();
         $handlerStack->push(Middleware::prepareBody(), 'prepare_body');
@@ -73,6 +72,6 @@ class Client implements HttpClient
             return new HandlerStack(Utils::chooseHandler());
         }
 
-        return new HandlerStack(\GuzzleHttp\choose_handler());
+        return new HandlerStack(choose_handler());
     }
 }

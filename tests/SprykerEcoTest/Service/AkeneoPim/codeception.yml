@@ -15,7 +15,7 @@ coverage:
 suites:
     Service:
         path: .
-        class_name: AkeneoPimServiceTester
+        actor: AkeneoPimServiceTester
         modules:
             enabled:
                 - Asserts

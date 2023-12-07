@@ -100,12 +100,14 @@ class Promise implements HttpPromise
         $this->promise->wait(false);
 
         if ($unwrap) {
-            if ($this->getState() == static::REJECTED) {
+            if ($this->getState() == static::REJECTED && $this->exception !== null) {
                 throw $this->exception;
             }
 
             return $this->response;
         }
+
+        return null;
     }
 
     /**
