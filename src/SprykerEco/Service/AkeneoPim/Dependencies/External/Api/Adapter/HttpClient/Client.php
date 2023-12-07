@@ -23,7 +23,7 @@ class Client implements HttpClient
     /**
      * @var \GuzzleHttp\ClientInterface
      */
-    protected ClientInterface $client;
+    protected $client;
 
     public function __construct()
     {

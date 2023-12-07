@@ -28,33 +28,31 @@ class Promise implements HttpPromise
     /**
      * @var \GuzzleHttp\Promise\PromiseInterface
      */
-    protected PromiseInterface $promise;
+    protected $promise;
 
     /**
      * @var string
      */
-    protected string $state;
+    protected $state;
 
     /**
-     * @var \Psr\Http\Message\ResponseInterface|null
+     * @var \Psr\Http\Message\ResponseInterface
      */
-    protected ?ResponseInterface $response = null;
+    protected $response;
 
     /**
-     * @var \Http\Client\Exception|null
+     * @var \Http\Client\Exception
      */
-    protected ?HttpExceptionInterface $exception = null;
+    protected $exception;
 
     /**
      * @var \Psr\Http\Message\RequestInterface
      */
-    protected RequestInterface $request;
+    protected $request;
 
     /**
      * @param \GuzzleHttp\Promise\PromiseInterface $promise
      * @param \Psr\Http\Message\RequestInterface $request
-     *
-     * @throws \Http\Client\Exception
      */
     public function __construct(PromiseInterface $promise, RequestInterface $request)
     {
@@ -75,7 +73,7 @@ class Promise implements HttpPromise
      *
      * @return \Http\Promise\Promise
      */
-    public function then(?callable $onFulfilled = null, ?callable $onRejected = null)
+    public function then(?callable $onFulfilled = null, ?callable $onRejected = null): HttpPromise
     {
         return new static($this->promise->then($onFulfilled, $onRejected), $this->request);
     }
