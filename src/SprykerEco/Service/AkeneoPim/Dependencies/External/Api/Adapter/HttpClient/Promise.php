@@ -165,7 +165,7 @@ class Promise implements HttpPromise
                 $exception->getMessage(),
                 $exception->getRequest(),
                 $exception->getResponse(),
-                $exception,
+                $exception
             );
         }
 
