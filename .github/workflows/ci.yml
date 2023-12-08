@@ -1,0 +1,126 @@
+name: CI
+
+env:
+    APPLICATION_ENV: 'development'
+    APPLICATION_STORE: 'DE'
+    PROJECT: 'Akeneo PIM'
+    DATABASE_VERSION: 10.2
+    DATABASE_HOST: 127.0.0.1
+    DATABASE_PORT: 3306
+    DATABASE_NAME: eu-docker
+    DATABASE_USERNAME: root
+    DATABASE_PASSWORD: secret
+    DATABASE_ROOT_PASSWORD: secret
+    DATABASE_ALLOW_EMPTY_PASSWORD: false
+    DATABASE_CHARACTER_SET: utf8
+    DATABASE_COLLATE: utf8_general_ci
+
+on:
+    pull_request:
+    push:
+        branches:
+            - 'master'
+    workflow_dispatch:
+
+jobs:
+    setup:
+        name: Setup Database MariaDB
+        runs-on: ubuntu-22.04
+
+        steps:
+            - uses: actions/checkout@v2
+            - uses: getong/mariadb-action@v1.1
+              with:
+                  host port: ${{ env.DATABASE_PORT }}
+                  container port: ${{ env.DATABASE_PORT }}
+                  character set server: ${{ env.DATABASE_CHARACTER_SET }}
+                  collation server: ${{ env.DATABASE_COLLATE }}
+                  mariadb version: ${{ env.DATABASE_VERSION }}
+                  mysql database: ${{ env.DATABASE_NAME }}
+                  mysql root password: ${{ env.DATABASE_ROOT_PASSWORD }}
+                  mysql user: ${{ env.DATABASE_USERNAME }}
+                  mysql password: ${{ env.DATABASE_PASSWORD }}
+
+    ci:
+        name: Akeneo PIM (PHP ${{ matrix.php-versions }})
+        needs: setup
+        runs-on: ubuntu-22.04
+
+        strategy:
+            fail-fast: false
+            matrix:
+                php-versions:
+                    - '7.2'
+                    - '8.2'
+
+        services:
+            mariadb:
+                image: mariadb:10.2
+                env:
+                    MYSQL_ALLOW_EMPTY_PASSWORD: false
+                    MYSQL_ROOT_PASSWORD: secret
+                    MYSQL_DATABASE: eu-docker
+                ports:
+                    - 3306:3306
+                options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+        steps:
+            - name: Checkout@v2
+              uses: actions/checkout@v2
+
+            - name: Setup PHP ${{ matrix.php-versions }}
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php-versions }}
+                  extensions: mbstring, intl, bcmath, pdo_mysql
+
+            - name: Get composer cache directory
+              id: composer-cache
+              run: |
+                  echo "::set-output name=dir::$(composer config cache-files-dir)"
+            - uses: actions/cache@v2
+              with:
+                  path: ${{ steps.composer-cache.outputs.dir }}
+                  key: ${{ runner.os }}-${{ matrix.php-versions }}-composer-${{ hashFiles('**/composer.lock') }}
+                  restore-keys: ${{ runner.os }}-${{ matrix.php-versions }}-composer-
+
+            - name: Composer validate
+              run: composer validate
+
+            - name: Composer version
+              run: composer --version
+
+            - name: Composer install
+              run: composer install --prefer-dist --no-interaction --optimize-autoloader
+
+            - name: PHP syntax validation
+              run: find ./src -path src -prune -o -type f -name '*.php' -print0 | xargs -0 -n1 -P4 php -l -n | (! grep -v "No syntax errors detected" )
+
+    lowest:
+        name: Akeneo PIM Prefer Lowest (PHP ${{ matrix.php-versions }})
+        runs-on: ubuntu-22.04
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '7.2'
+                  extensions: mbstring, intl, bcmath, pdo_mysql
+
+            - name: Composer Install
+              run: composer install --prefer-dist --no-interaction --profile
+
+            - name: Composer Update
+              run: composer update --prefer-lowest --prefer-dist --no-interaction --profile -vvv
+
+            - name: Prefer lowest installation
+              run: composer require --dev dereuromark/composer-prefer-lowest;
+
+            - name: PHP syntax validation
+              run: find ./src -path src -prune -o -type f -name '*.php' -print0 | xargs -0 -n1 -P4 php -l -n | (! grep -v "No syntax errors detected" )
+
+            - name: Prefer lowest validation
+              run: vendor/bin/validate-prefer-lowest -m

@@ -97,15 +97,15 @@ class Promise implements HttpPromise
     {
         $this->promise->wait(false);
 
-        if ($unwrap) {
-            if ($this->getState() == static::REJECTED && $this->exception !== null) {
-                throw $this->exception;
-            }
-
-            return $this->response;
+        if (!$unwrap) {
+            return null;
         }
 
-        return null;
+        if ($this->getState() == static::REJECTED && $this->exception !== null) {
+            throw $this->exception;
+        }
+
+        return $this->response;
     }
 
     /**
@@ -160,16 +160,16 @@ class Promise implements HttpPromise
             return new HttpNetworkException($exception->getMessage(), $exception->getRequest(), $exception);
         }
 
-        if ($exception instanceof RequestException) {
-            if ($exception->hasResponse()) {
-                return new HttpException(
-                    $exception->getMessage(),
-                    $exception->getRequest(),
-                    $exception->getResponse(),
-                    $exception,
-                );
-            }
+        if ($exception instanceof RequestException && $exception->hasResponse()) {
+            return new HttpException(
+                $exception->getMessage(),
+                $exception->getRequest(),
+                $exception->getResponse(),
+                $exception,
+            );
+        }
 
+        if ($exception instanceof RequestException) {
             return new HttpRequestException($exception->getMessage(), $exception->getRequest(), $exception);
         }
 
