@@ -1,0 +1,9 @@
+[
+    {
+        "fileName": "src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Adapter/HttpClient/Promise.php",
+        "description": "Method `SprykerEco\\Service\\AkeneoPim\\Dependencies\\External\\Api\\Adapter\\HttpClient\\Promise::then()` must have return type.",
+        "rule": "ExternalMethodExtensionReturnTypeRule",
+        "ruleset": "Spryker",
+        "priority": "1"
+    }
+]

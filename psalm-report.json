@@ -1,0 +1,104 @@
+{
+    "error": [],
+    "warning": [
+        {
+            "severity": "info",
+            "line_from": 170,
+            "line_to": 170,
+            "type": "PossiblyNullArgument",
+            "message": "Argument 3 of Http\\Client\\Exception\\HttpException::__construct cannot be null, possibly null value provided",
+            "file_name": "vendor/spryker-eco/akeneo-pim/src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Adapter/HttpClient/Promise.php",
+            "snippet": "                    $exception->getResponse(),",
+            "selected_text": "$exception->getResponse()",
+            "error_level": 3,
+            "shortcode": 78
+        },
+        {
+            "severity": "info",
+            "line_from": 30,
+            "line_to": 30,
+            "type": "InvalidNullableReturnType",
+            "message": "The declared return type 'int' for SprykerEco\\Service\\AkeneoPim\\Dependencies\\External\\Api\\Wrapper\\AkeneoResourceCursor::getPageSize is not nullable, but 'int|null' contains null",
+            "file_name": "vendor/spryker-eco/akeneo-pim/src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Wrapper/AkeneoResourceCursor.php",
+            "snippet": "     * @return int",
+            "selected_text": "int",
+            "error_level": 5,
+            "shortcode": 144
+        },
+        {
+            "severity": "info",
+            "line_from": 34,
+            "line_to": 35,
+            "type": "NullableReturnStatement",
+            "message": "The declared return type 'int' for SprykerEco\\Service\\AkeneoPim\\Dependencies\\External\\Api\\Wrapper\\AkeneoResourceCursor::getPageSize is not nullable, but the function returns 'int|null'",
+            "file_name": "vendor/spryker-eco/akeneo-pim/src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Wrapper/AkeneoResourceCursor.php",
+            "snippet": "        return $this->resourceCursor\n            ->getPageSize();",
+            "selected_text": "$this->resourceCursor\n            ->getPageSize()",
+            "error_level": 5,
+            "shortcode": 139
+        },
+        {
+            "severity": "info",
+            "line_from": 35,
+            "line_to": 35,
+            "type": "LessSpecificImplementedReturnType",
+            "message": "The inherited return type 'SprykerEco\\Service\\AkeneoPim\\Dependencies\\External\\Api\\Wrapper\\AkeneoResourcePageInterface&static' for SprykerEco\\Service\\AkeneoPim\\Dependencies\\External\\Api\\Wrapper\\AkeneoResourcePageInterface::getFirstPage is more specific than the implemented return type for SprykerEco\\Service\\AkeneoPim\\Dependencies\\External\\Api\\Wrapper\\AkeneoResourcePage::getfirstpage 'SprykerEco\\Service\\AkeneoPim\\Dependencies\\External\\Api\\Wrapper\\AkeneoResourcePageInterface'",
+            "file_name": "vendor/spryker-eco/akeneo-pim/src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Wrapper/AkeneoResourcePage.php",
+            "snippet": "     * @return \\SprykerEco\\Service\\AkeneoPim\\Dependencies\\External\\Api\\Wrapper\\AkeneoResourcePageInterface",
+            "selected_text": "\\SprykerEco\\Service\\AkeneoPim\\Dependencies\\External\\Api\\Wrapper\\AkeneoResourcePageInterface",
+            "error_level": 5,
+            "shortcode": 166
+        }
+    ],
+    "deprecation": [
+        {
+            "severity": "info",
+            "line_from": 21,
+            "line_to": 21,
+            "type": "DeprecatedInterface",
+            "message": "Http\\Client\\HttpClient is marked deprecated",
+            "file_name": "vendor/spryker-eco/akeneo-pim/src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Adapter/HttpClient/Client.php",
+            "snippet": "class Client implements HttpClient",
+            "selected_text": "Client",
+            "error_level": 2,
+            "shortcode": 152
+        },
+        {
+            "severity": "info",
+            "line_from": 75,
+            "line_to": 75,
+            "type": "DeprecatedFunction",
+            "message": "The function guzzlehttp\\choose_handler has been marked as deprecated",
+            "file_name": "vendor/spryker-eco/akeneo-pim/src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Adapter/HttpClient/Client.php",
+            "snippet": "        return new HandlerStack(choose_handler());",
+            "selected_text": "choose_handler()",
+            "error_level": 2,
+            "shortcode": 201
+        },
+        {
+            "severity": "info",
+            "line_from": 41,
+            "line_to": 41,
+            "type": "DeprecatedClass",
+            "message": "Class Http\\Client\\HttpClient is marked as deprecated",
+            "file_name": "vendor/spryker-eco/akeneo-pim/src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Adapter/Sdk/AkeneoPimSdkFactory.php",
+            "snippet": "     * @return \\Http\\Client\\HttpClient",
+            "selected_text": "\\Http\\Client\\HttpClient",
+            "error_level": 2,
+            "shortcode": 98
+        },
+        {
+            "severity": "info",
+            "line_from": 43,
+            "line_to": 43,
+            "type": "DeprecatedClass",
+            "message": "Class Http\\Client\\HttpClient is marked as deprecated",
+            "file_name": "vendor/spryker-eco/akeneo-pim/src/SprykerEco/Service/AkeneoPim/Dependencies/External/Api/Adapter/Sdk/AkeneoPimSdkFactory.php",
+            "snippet": "    protected function createHttpClient(): HttpClient",
+            "selected_text": "HttpClient",
+            "error_level": 2,
+            "shortcode": 98
+        }
+    ],
+    "count": 8
+}
