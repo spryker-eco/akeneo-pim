@@ -22,18 +22,14 @@ class AkeneoPimSdkFactory implements AkeneoPimSdkFactoryInterface
      */
     public function createAkeneoPimClient(AkeneoPimConfig $config): AkeneoPimClientInterface
     {
-        $clientBuilder = new AkeneoPimClientBuilder(
-            $config->getHost(),
-        );
-        $clientBuilder->setHttpClient(
-            $this->createHttpClient(),
-        );
+        $clientBuilder = new AkeneoPimClientBuilder($config->getHost());
+        $clientBuilder->setHttpClient($this->createHttpClient());
 
         return $clientBuilder->buildAuthenticatedByPassword(
             $config->getClientId(),
             $config->getClientSecret(),
             $config->getUsername(),
-            $config->getPassword(),
+            $config->getPassword()
         );
     }
 
