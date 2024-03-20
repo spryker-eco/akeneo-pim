@@ -4,7 +4,7 @@
     "description": "AkeneoPim module",
     "license": "proprietary",
     "require": {
-        "akeneo/api-php-client": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0",
+        "akeneo/api-php-client": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^v9.0.0 || ^10.0.0 || ^11.0.0",
         "php": ">=7.2",
         "guzzlehttp/guzzle": "^6.0.0 || ^7.0.0",
         "spryker/kernel": "^3.30.0"
