@@ -1,10 +1,13 @@
 build:
   environment:
-    php: '7.2'
+    php: '8.1'
 
   tests:
     override:
       - true
+  dependencies:
+      override:
+          - composer self-update
 
   nodes:
     analysis:
