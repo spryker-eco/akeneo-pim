@@ -1,3 +1,6 @@
 parameters:
     level: 7
     checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    ignoreErrors:
+        - '#Parameter \#1 \$httpClient of method Akeneo\\Pim\\ApiClient\\AkeneoPimClientBuilder::setHttpClient\(\) expects Akeneo\\Pim\\ApiClient\\Client\\ClientInterface, Psr\\Http\\Client\\ClientInterface given\.#'

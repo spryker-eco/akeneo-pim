@@ -7,8 +7,8 @@
 
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\HttpClient;
 
-use Psr\Http\Client\ClientInterface;
+use Akeneo\Pim\ApiClient\Client\ClientInterface;
 
-class Client extends AbstractHttpClient implements ClientInterface
+class AkeneoHttpClient extends AbstractHttpClient implements ClientInterface
 {
 }

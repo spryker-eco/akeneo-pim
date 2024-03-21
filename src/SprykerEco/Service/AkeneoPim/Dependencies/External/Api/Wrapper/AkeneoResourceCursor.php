@@ -40,6 +40,7 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function current()
     {
         return $this->resourceCursor
@@ -62,6 +63,7 @@ class AkeneoResourceCursor implements AkeneoResourceCursorInterface
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function key()
     {
         return $this->resourceCursor
