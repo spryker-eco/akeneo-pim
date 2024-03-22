@@ -8,8 +8,8 @@
 namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\HttpClient\Exception;
 
 use Http\Client\Exception;
-use UnexpectedValueException as UnexpectedValueExceptionUnexpectedValueException;
+use UnexpectedValueException as SplUnexpectedValueException;
 
-class UnexpectedValueException extends UnexpectedValueExceptionUnexpectedValueException implements Exception
+class UnexpectedValueException extends SplUnexpectedValueException implements Exception
 {
 }
