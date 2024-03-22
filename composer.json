@@ -4,13 +4,19 @@
     "description": "AkeneoPim module",
     "license": "proprietary",
     "require": {
-        "akeneo/api-php-client": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0",
-        "php": ">=7.2",
-        "guzzlehttp/guzzle": "^6.0.0 || ^7.0.0",
+        "akeneo/api-php-client": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
+        "php": ">=8.1",
+        "php-http/httplug": "^1.0.0 || ^2.0.0",
+        "php-http/promise": "^1.0.0",
+        "psr/http-client": "^1.0.0",
+        "psr/http-message": "^1.0.0 || ^2.0.0",
+        "spryker/guzzle": "^2.3.0",
         "spryker/kernel": "^3.30.0"
     },
     "require-dev": {
-        "spryker/code-sniffer": "*"
+        "phpstan/phpstan": "^1.0.0",
+        "spryker/code-sniffer": "*",
+        "spryker/testify": "*"
     },
     "autoload": {
         "psr-4": {
@@ -26,7 +32,9 @@
     "prefer-stable": true,
     "scripts": {
         "cs-check": "phpcs -p -s --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml src/ tests/",
-        "cs-fix": "phpcbf -p --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml src/ tests/"
+        "cs-fix": "phpcbf -p --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml src/ tests/",
+        "stan": "phpstan analyse -c phpstan.neon -l 8 src/",
+        "stan-setup": "cp composer.json composer.backup && COMPOSER_MEMORY_LIMIT=-1 composer require --dev phpstan/phpstan:^0.12 && mv composer.backup composer.json"
     },
     "extra": {
         "branch-alias": {

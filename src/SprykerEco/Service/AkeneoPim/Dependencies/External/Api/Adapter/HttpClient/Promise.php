@@ -75,7 +75,7 @@ class Promise implements HttpPromise
      */
     public function then(?callable $onFulfilled = null, ?callable $onRejected = null): HttpPromise
     {
-        return new static($this->promise->then($onFulfilled, $onRejected), $this->request);
+        return new self($this->promise->then($onFulfilled, $onRejected), $this->request);
     }
 
     /**
@@ -165,7 +165,7 @@ class Promise implements HttpPromise
                 $exception->getMessage(),
                 $exception->getRequest(),
                 $exception->getResponse(),
-                $exception
+                $exception,
             );
         }
 

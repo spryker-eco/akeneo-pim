@@ -9,8 +9,10 @@ namespace SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\Sdk;
 
 use Akeneo\Pim\ApiClient\AkeneoPimClientBuilder;
 use Akeneo\Pim\ApiClient\AkeneoPimClientInterface;
-use Http\Client\HttpClient;
+use Akeneo\Pim\ApiClient\Client\ClientInterface as AkeneoClientInterface;
+use Psr\Http\Client\ClientInterface;
 use SprykerEco\Service\AkeneoPim\AkeneoPimConfig;
+use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\HttpClient\AkeneoHttpClient;
 use SprykerEco\Service\AkeneoPim\Dependencies\External\Api\Adapter\HttpClient\Client;
 
 class AkeneoPimSdkFactory implements AkeneoPimSdkFactoryInterface
@@ -23,21 +25,41 @@ class AkeneoPimSdkFactory implements AkeneoPimSdkFactoryInterface
     public function createAkeneoPimClient(AkeneoPimConfig $config): AkeneoPimClientInterface
     {
         $clientBuilder = new AkeneoPimClientBuilder($config->getHost());
-        $clientBuilder->setHttpClient($this->createHttpClient());
+        $clientBuilder->setHttpClient($this->getHttpClient());
 
         return $clientBuilder->buildAuthenticatedByPassword(
             $config->getClientId(),
             $config->getClientSecret(),
             $config->getUsername(),
-            $config->getPassword()
+            $config->getPassword(),
         );
     }
 
     /**
-     * @return \Http\Client\HttpClient
+     * @return \Psr\Http\Client\ClientInterface
      */
-    protected function createHttpClient(): HttpClient
+    public function createHttpClient(): ClientInterface
     {
         return new Client();
+    }
+
+    /**
+     * @return \Akeneo\Pim\ApiClient\Client\ClientInterface
+     */
+    public function createAkeneoHttpClient(): AkeneoClientInterface
+    {
+        return new AkeneoHttpClient();
+    }
+
+    /**
+     * @return \Akeneo\Pim\ApiClient\Client\ClientInterface|\Psr\Http\Client\ClientInterface
+     */
+    public function getHttpClient()
+    {
+        if (interface_exists('\Akeneo\Pim\ApiClient\Client\ClientInterface')) {
+            return $this->createAkeneoHttpClient();
+        }
+
+        return $this->createHttpClient();
     }
 }
