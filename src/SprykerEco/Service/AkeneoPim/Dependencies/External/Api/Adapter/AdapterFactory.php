@@ -57,7 +57,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new ProductApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
@@ -68,7 +68,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new CategoryApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
@@ -79,7 +79,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new AttributeApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
@@ -90,7 +90,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new AttributeGroupApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
@@ -101,7 +101,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new AttributeOptionApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
@@ -112,7 +112,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new AssociationTypeApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
@@ -123,7 +123,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new ChannelApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
@@ -134,7 +134,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new CurrencyApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
@@ -145,7 +145,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new FamilyApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
@@ -156,7 +156,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new FamilyVariantApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
@@ -167,7 +167,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new LocaleApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
@@ -178,7 +178,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new MeasureFamilyApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
@@ -189,7 +189,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new ProductMediaFileApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
@@ -200,7 +200,7 @@ class AdapterFactory implements AdapterFactoryInterface
     {
         return new ProductModelApiAdapter(
             $this->createAkeneoPimSdkFactory()->createAkeneoPimClient($this->config),
-            $this->wrapperFactory
+            $this->wrapperFactory,
         );
     }
 
